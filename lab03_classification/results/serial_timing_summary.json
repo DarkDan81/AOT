@@ -1,0 +1,7 @@
+{
+  "n": 20,
+  "wall_seconds": 47.82568540000011,
+  "responses_per_second": 0.4181853293418761,
+  "mean_end_to_end_seconds": 2.3912842700000057,
+  "note": "first10train texts, two prompts; separate from quality metrics"
+}

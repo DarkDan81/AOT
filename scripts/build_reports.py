@@ -80,7 +80,8 @@ def table(doc,rows,number):
         cells=tab.rows[0].cells if ri==0 else tab.add_row().cells
         for cell,text,w in zip(cells,row,widths):
             cell.width=Cm(w);p=cell.paragraphs[0];p.paragraph_format.first_line_indent=Cm(0);p.paragraph_format.line_spacing=1.0;p.paragraph_format.space_after=Pt(3);p.paragraph_format.space_before=Pt(3)
-            p.paragraph_format.keep_with_next = ri == 0
+            # Keep compact tables whole; long tables retain repeating headers.
+            p.paragraph_format.keep_with_next = ri == 0 or (len(rows) <= 10 and ri < len(rows)-1)
             font(p.add_run(text),size=12 if n<=5 else 10,bold=ri==0)
         if ri==0:
             rep=OxmlElement('w:tblHeader');tab.rows[0]._tr.get_or_add_trPr().append(rep)

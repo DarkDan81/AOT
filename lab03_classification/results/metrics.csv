@@ -1,0 +1,9 @@
+set,method,n,accuracy,macro_f1,mean_seconds,input_tokens,output_tokens,api_cost_per_1000_usd,cost_note
+stress,majority,100,0.23,0.12466124661246612,2.7860000000146097e-06,0,0,0,"local inference, no API tariff; electricity/hardware not estimated"
+stress,tfidf_lr,100,0.36,0.33789965012350875,0.00041264300000875664,0,0,0,"local inference, no API tariff; electricity/hardware not estimated"
+stress,zero_shot,100,0.9,0.8837352966065838,2.7901431090000095,16257,700,0,"local inference, no API tariff; electricity/hardware not estimated"
+stress,few_shot,100,0.9,0.8887877921986775,2.7882366009998987,40257,700,0,"local inference, no API tariff; electricity/hardware not estimated"
+test,majority,500,0.642,0.26065773447015833,2.9280000035214466e-07,0,0,0,"local inference, no API tariff; electricity/hardware not estimated"
+test,tfidf_lr,500,0.696,0.5427288870102117,0.0004149987999844598,0,0,0,"local inference, no API tariff; electricity/hardware not estimated"
+test,zero_shot,500,0.516,0.5137779938914734,2.7168324066000076,86672,3500,0,"local inference, no API tariff; electricity/hardware not estimated"
+test,few_shot,500,0.67,0.6590838021609638,2.723223419600001,206672,3500,0,"local inference, no API tariff; electricity/hardware not estimated"

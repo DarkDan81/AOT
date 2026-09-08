@@ -1,5 +1,5 @@
 {
-  "random": {
+  "source_random": {
     "rows": 21268,
     "nulls": {
       "label": 0,
@@ -9,14 +9,15 @@
     "sha256": "bfa850dd0548aaea682bcfa3f1106763c4ed1ed8f5341cec75fed61fda8ff2f3",
     "url": "https://raw.githubusercontent.com/strawberrypie/rusentiment/master/Dataset/rusentiment_random_posts.csv"
   },
-  "test": {
-    "rows": 500,
-    "classes": {
-      "neutral": 321,
-      "positive": 121,
-      "negative": 58
+  "source_test": {
+    "rows": 2967,
+    "nulls": {
+      "label": 0,
+      "text": 0
     },
-    "sha256": "cf6df43f217c48eb7e5e5f96e3eabe212b58f71ca809a35c9ea010655f4d0978"
+    "duplicate_texts": 0,
+    "sha256": "35964a82c1ecf360e6d4a9fe31cf8532225213cf610ba13bb7eacb081446dc10",
+    "url": "https://raw.githubusercontent.com/strawberrypie/rusentiment/master/Dataset/rusentiment_test.csv"
   },
   "train": {
     "rows": 3000,
@@ -35,6 +36,15 @@
       "negative": 76
     },
     "sha256": "f608bc20149b7596a8997fca257a995bf3dbadeee939d18fbe953469475927b4"
+  },
+  "test": {
+    "rows": 500,
+    "classes": {
+      "neutral": 321,
+      "positive": 121,
+      "negative": 58
+    },
+    "sha256": "cf6df43f217c48eb7e5e5f96e3eabe212b58f71ca809a35c9ea010655f4d0978"
   },
   "policy": "Three original classes; speech and skip excluded. Unique text. Original held-out test preserved. Stratified seed42, no test tuning."
 }

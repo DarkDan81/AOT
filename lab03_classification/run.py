@@ -1,5 +1,7 @@
 """Run 4 sentiment systems on frozen test and synthetic stress sets."""
-import argparse, json, time
+import argparse, hashlib, json, time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime,timezone
 from pathlib import Path
 from typing import Literal
 import numpy as np
@@ -13,13 +15,17 @@ from common.llm import complete, parse_json
 
 HERE=Path(__file__).resolve().parent
 class Sentiment(BaseModel):
-    model_config=ConfigDict(extra='forbid')
+    model_config=ConfigDict(extra='forbid',strict=True)
     label:Literal['positive','negative','neutral']
 
 def main():
-    parser=argparse.ArgumentParser(); parser.add_argument('--classical-only',action='store_true'); args=parser.parse_args()
+    parser=argparse.ArgumentParser(); parser.add_argument('--classical-only',action='store_true'); parser.add_argument('--workers',type=int,choices=[1,2],default=2); args=parser.parse_args()
     out=HERE/'results';out.mkdir(exist_ok=True)
     train=pd.read_csv(HERE/'data/train.csv'); val=pd.read_csv(HERE/'data/validation.csv')
+    assert hashlib.sha256((HERE/'data/stress.csv').read_bytes()).hexdigest()==(HERE/'data/stress.sha256').read_text().strip(),'Stress gold changed after freeze'
+    provenance=json.loads((HERE/'data/provenance.json').read_text(encoding='utf-8'))
+    for split in ['train','validation','test']:
+        assert hashlib.sha256((HERE/f'data/{split}.csv').read_bytes()).hexdigest()==provenance[split]['sha256'],f'{split} changed after freeze'
     tuning=[]; models=[]
     # Exactly one tuned hyperparameter, C; all vectorizer parameters fixed.
     for c in [0.5,1.0,2.0]:
@@ -52,18 +58,27 @@ def main():
     if rawpath.exists():
         for line in rawpath.read_text(encoding='utf-8').splitlines():
             r=json.loads(line);existing[(r['id'],r['mode'])]=r
-    # Serial calls: elapsed includes HTTP round trip, but not queueing behind other experiments.
-    for row in data.to_dict('records'):
-        for mode,prompt in prompts.items():
-            key=(row['id'],mode)
-            if key in existing:continue
-            response=complete([{'role':'system','content':prompt},{'role':'user','content':row['text']}],schema=Sentiment,max_tokens=64)
-            r={'id':row['id'],'set':row['set'],'mode':mode,**response}
-            try:r['label']=Sentiment.model_validate(parse_json(response['content'])).label;r['valid']=True
-            except Exception as e:r['label']='invalid';r['valid']=False;r['error']=str(e)
+    # Two concurrent requests are optional. HTTP latency includes server scheduling;
+    # it must not be described as exclusive sequential latency.
+    def classify(row,mode):
+        response=complete([{'role':'system','content':prompts[mode]},{'role':'user','content':row['text']}],schema=Sentiment,max_tokens=64)
+        r={'id':row['id'],'set':row['set'],'mode':mode,'client_workers':args.workers,**response}
+        try:r['label']=Sentiment.model_validate(parse_json(response['content'])).label;r['valid']=True
+        except (ValueError,TypeError) as e:r['label']='invalid';r['valid']=False;r['error']=str(e)
+        return r
+    inference_start=time.perf_counter(); started_at=datetime.now(timezone.utc).isoformat(); new_count=0
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        pending=[pool.submit(classify,row,mode) for row in data.to_dict('records') for mode in prompts if (row['id'],mode) not in existing]
+        for future in as_completed(pending):
+            r=future.result()
             with rawpath.open('a',encoding='utf-8') as f:f.write(json.dumps(r,ensure_ascii=False)+'\n')
-            existing[key]=r
-        if len(existing)%40==0:print(f'{len(existing)}/1200 LLM responses',flush=True)
+            existing[(r['id'],r['mode'])]=r
+            new_count+=1
+            if len(existing)%40==0:print(f'{len(existing)}/1200 LLM responses',flush=True)
+    inference_seconds=time.perf_counter()-inference_start
+    execution={'started_at':started_at,'workers':args.workers,'new_responses':new_count,'wall_seconds':inference_seconds,'responses_per_second':new_count/inference_seconds if new_count else None,'cached_responses':len(existing)-new_count}
+    with (out/'execution_runs.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(execution)+'\n')
+    assert len(existing)==len(data)*len(prompts),'Incomplete or foreign response cache; do not report partial metrics'
     for mode in prompts:
         data[mode]=[existing[(i,mode)]['label'] for i in data.id]
         for column in ['elapsed_seconds','prompt_tokens','completion_tokens']:

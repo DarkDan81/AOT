@@ -1,0 +1,20 @@
+id,text,label,set,majority,majority_seconds,tfidf_lr,tfidf_lr_seconds,category,zero_shot,zero_shot_elapsed_seconds,zero_shot_prompt_tokens,zero_shot_completion_tokens,few_shot,few_shot_elapsed_seconds,few_shot_prompt_tokens,few_shot_completion_tokens,analysis_group
+test_01325,Хах.Фагот!!!))),positive,test,neutral,2.928000003521447e-07,neutral,0.0003909999995812,,negative,2.7984432999996898,153,7,neutral,2.7949318999999377,393,7,classical_error
+test_00360,Музыка моей молодости :D,positive,test,neutral,2.928000003521447e-07,neutral,0.0003578999999263,,positive,2.551776600000266,156,7,positive,2.5481293999996524,396,7,classical_error
+test_00789,"Как говорится, люди смеются, чтобы не заплакать....",negative,test,neutral,2.928000003521447e-07,neutral,0.0004126999997424,,negative,2.5954611000001933,160,7,neutral,2.5951304000000164,400,7,classical_error
+test_02750,а сегодня пойдем гулять????,neutral,test,neutral,2.928000003521447e-07,positive,0.0006620000003749,,positive,2.8118122999999287,153,7,positive,2.7977429999996275,393,7,classical_error
+test_00602,А ты хайп?,neutral,test,neutral,2.928000003521447e-07,positive,0.0003756999999495,,neutral,2.792227599999933,151,7,neutral,2.7886510000003,391,7,classical_error
+test_02597,"Гарри Поттера сняли в стиле ""арт-хаус"" ) а у Рэдклиффа оч волосатая нешестнадцатилентяя грудь. Фильм напомнил ""как я провел этим летом"". кароче я в шоке от этих маркетологов киношных)",neutral,test,neutral,2.928000003521447e-07,neutral,0.0003983999999945,,negative,2.410777600000074,217,7,negative,2.4101204999997208,457,7,llm_error
+test_02633,"Собраться, решиться, и вынести всех,
+Сокрушить, растоптать, растерзать, 
+И в спорте, и в жизни почёт и успех 
+У того, кто рождён побеждать! ",neutral,test,neutral,2.928000003521447e-07,neutral,0.0003710999999384,,positive,2.401214999999865,200,7,positive,2.4018338000000767,440,7,llm_error
+test_01460,Ужасно  как я мечтаю о порядке у себя на кухне))),neutral,test,neutral,2.928000003521447e-07,neutral,0.0004617999998117,,negative,2.7902297999999064,164,7,negative,2.7865403999999216,404,7,llm_error
+test_01198,ооооооо тебя тоже поперла моя песенка????,neutral,test,neutral,2.928000003521447e-07,positive,0.0003793999999288,,negative,2.816518300000098,163,7,positive,2.8161003000000164,403,7,llm_error
+test_00760,"Аскар, привет! С помощью этого подарка сможешь БЕСПЛАТНО получить футболку тут:    
+ 😃 👕 🎁 vk.com/app3051970 👚 👕 🎁",neutral,test,neutral,2.928000003521447e-07,neutral,0.0004573000001073,,positive,2.820224199999757,207,7,positive,2.81674030000022,447,7,llm_error
+test_01758,"Лучшие вещи в жизни — бесплатны: объятия, улыбки, друзья, поцелуи, семья, сон, любовь, смех и хорошее настроение!",positive,test,neutral,2.928000003521447e-07,neutral,0.0007513000000471,,positive,2.820187299999816,187,7,positive,2.820163099999718,427,7,disagreement
+test_00362,Ееееее!!!)),positive,test,neutral,2.928000003521447e-07,neutral,0.000391000000036,,positive,2.747138499999892,153,7,positive,2.7439635999999155,393,7,disagreement
+test_01008,"Арнольд Шварцнеггер уникальный человек-он может 5 дней не спать,а потом взять и выжать с груди 350 кг.",neutral,test,neutral,2.928000003521447e-07,neutral,0.0003897999999935,,positive,2.500255500000094,185,7,positive,2.4995711999999912,425,7,disagreement
+test_00873,Мастер класс по изготовлению поздравительных открытое-ручная работа!!!)),neutral,test,neutral,2.928000003521447e-07,neutral,0.0003689000000122,,positive,2.7874204999998256,164,7,positive,2.784675899999911,404,7,disagreement
+test_00229,Ты чегооо?..,neutral,test,neutral,2.928000003521447e-07,positive,0.0003738999998859,,neutral,2.414894000000004,152,7,neutral,2.4294702999995934,392,7,disagreement
