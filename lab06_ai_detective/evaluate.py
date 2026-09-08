@@ -1,14 +1,14 @@
-﻿import json,pathlib,sys
-sys.path.insert(0,str(pathlib.Path(__file__).parent))
+import json,pathlib,sys
+sys.path.insert(0,str(pathlib.Path(__file__).parent.parent))
 import pandas as pd
-from src.evaluation import evidence_metrics
+from lab06_ai_detective.src.evaluation import evidence_metrics
 P=pathlib.Path(__file__).parent
 
 def read(p):return [json.loads(x) for x in p.read_text(encoding='utf8').splitlines()]
 rows=read(P/'results/responses.jsonl')
 flat=[]
 for r in rows:
- a=r.get('answer',{});t=r.get('transport',{});u=t.get('usage',{})
+ a=r.get('answer',{});t=r.get('transport') or {};u=t.get('usage',{})
  flat.append(dict(run_id=r['run_id'],kind=r['kind'],mode=r['mode'],question_id=r['question_id'],gold_status=r['gold_status'],pred_status=a.get('status','INVALID'),valid=r['valid'],confidence=a.get('confidence'),seconds=t.get('elapsed_seconds',r.get('elapsed_seconds')),input_tokens=u.get('prompt_tokens',0),output_tokens=u.get('completion_tokens',0),**r.get('metrics',{'status_correct':0})))
 df=pd.DataFrame(flat);df.to_csv(P/'results/metrics_per_response.csv',index=False,encoding='utf8')
 cols=['status_correct','evidence_precision','evidence_recall','evidence_f1','counterevidence_recall','both_correct','insufficient_correct','confident_when_insufficient','seconds','input_tokens','output_tokens']

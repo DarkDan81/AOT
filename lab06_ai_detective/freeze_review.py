@@ -1,7 +1,7 @@
-﻿import json,hashlib,pathlib,sys
-P=pathlib.Path(__file__).parent;sys.path.insert(0,str(P))
-from src.retrieval import retrieve
-from src.evaluation import evidence_metrics
+import json,hashlib,pathlib,sys
+P=pathlib.Path(__file__).parent;sys.path.insert(0,str(P.parent))
+from lab06_ai_detective.src.retrieval import retrieve
+from lab06_ai_detective.src.evaluation import evidence_metrics
 D=P/'data'
 read=lambda f:[json.loads(x) for x in (D/f).read_text(encoding='utf-8-sig').splitlines()]
 vs=read('variants.jsonl')

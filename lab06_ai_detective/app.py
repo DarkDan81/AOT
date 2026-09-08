@@ -1,11 +1,11 @@
-﻿import json,pathlib,sys,hashlib
+import json,pathlib,sys,hashlib
 import pandas as pd
 import streamlit as st
 P=pathlib.Path(__file__).parent;sys.path.insert(0,str(P));sys.path.insert(0,str(P.parent))
-from src.context_builder import build
-from src.retrieval import retrieve
-from src.padic import branches,code
-from src.llm import ask
+from lab06_ai_detective.src.context_builder import build
+from lab06_ai_detective.src.retrieval import retrieve
+from lab06_ai_detective.src.padic import branches,code
+from lab06_ai_detective.src.llm import ask
 
 def read(p):return [json.loads(x) for x in p.read_text(encoding='utf8').splitlines()]
 st.set_page_config(page_title='AI-детектив: Орион',layout='wide')

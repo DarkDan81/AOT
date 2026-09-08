@@ -4,10 +4,10 @@ from itertools import product
 from unittest.mock import patch
 import pytest
 P=Path(__file__).parents[1];sys.path.insert(0,str(P));sys.path.insert(0,str(P.parent))
-from src.padic import code,distance
-from src.retrieval import retrieve
-from src.context_builder import build
-from src.schemas import validate
+from lab06_ai_detective.src.padic import code,distance
+from lab06_ai_detective.src.retrieval import retrieve
+from lab06_ai_detective.src.context_builder import build
+from lab06_ai_detective.src.schemas import validate
 
 def read(name):return [json.loads(x) for x in (P/'data'/name).read_text(encoding='utf-8-sig').splitlines()]
 DOCS=read('documents.jsonl');CLAIMS=read('claims.jsonl');QUESTIONS=read('questions.jsonl')
@@ -32,8 +32,8 @@ def test_both_without_counter():
 def test_insufficient_with_invented_answer():
  with pytest.raises(ValueError):validate(raw(status='insufficient',answer='Invented motive'),['C08'],'Q01')
 def test_llm_unavailable():
- from src.llm import ask
- with patch('src.llm.complete',side_effect=ConnectionError('server unavailable')):
+ from lab06_ai_detective.src.llm import ask
+ with patch('lab06_ai_detective.src.llm.complete',side_effect=ConnectionError('server unavailable')):
   with pytest.raises(ConnectionError):ask(QUESTIONS[0],'context',['C08'])
 def test_bm25_maximum():assert len(retrieve('Лада',CLAIMS,100))==15
 def test_bc_same_ids_every_variant():
@@ -75,8 +75,23 @@ def test_insufficient_fabricated_explanation():
  with pytest.raises(ValueError):validate(raw(status='insufficient',answer=None,explanation='Илья удалил файл из мести.'),['C08'],'Q01')
 
 def test_raw_invalid_response_retained():
- from src.llm import ask,ResponseValidationError
+ from lab06_ai_detective.src.llm import ask,ResponseValidationError
  response={'content':'not json','usage':{'prompt_tokens':10}}
- with patch('src.llm.complete',return_value=response):
+ with patch('lab06_ai_detective.src.llm.complete',return_value=response):
   with pytest.raises(ResponseValidationError) as e:ask(QUESTIONS[0],'context',['C08'])
  assert e.value.response==response
+
+
+@pytest.mark.parametrize('http_response',[False,True])
+def test_network_error_serializable(http_response):
+ import requests
+ from lab06_ai_detective.run_experiment import error_record
+ if http_response:
+  response=requests.Response();response.status_code=503;response._content=b'{"error":"unavailable"}'
+  error=requests.HTTPError('503',response=response)
+ else:error=requests.ConnectionError('connection refused')
+ row=error_record(error,1.0)
+ assert row['valid'] is False
+ assert 'transport' not in row
+ assert json.loads(json.dumps(row))['error']
+ if http_response:assert row['http_status']==503 and row['http_body']=='{"error":"unavailable"}'

@@ -1,12 +1,21 @@
 """Run from repository root; resume completed requests without hidden retries."""
 import argparse,json,pathlib,sys,time,hashlib
 P=pathlib.Path(__file__).parent;sys.path.insert(0,str(P));sys.path.insert(0,str(P.parent))
-from src.context_builder import build
-from src.retrieval import retrieve
-from src.llm import ask
-from src.evaluation import score,evidence_metrics
+from lab06_ai_detective.src.context_builder import build
+from lab06_ai_detective.src.retrieval import retrieve
+from lab06_ai_detective.src.llm import ask
+from lab06_ai_detective.src.evaluation import score,evidence_metrics
 
 def read(path):return [json.loads(x) for x in path.read_text(encoding='utf-8-sig').splitlines()]
+
+def error_record(error,elapsed):
+ row=dict(valid=False,error=type(error).__name__+': '+str(error),elapsed_seconds=elapsed)
+ response=getattr(error,'response',None)
+ if isinstance(response,dict):row['transport']=response
+ elif response is not None:
+  row['http_status']=getattr(response,'status_code',None)
+  row['http_body']=getattr(response,'text',None)
+ return row
 
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--limit',type=int);parser.add_argument('--kind',choices=['baseline','permutation','deletion','contradiction']);args=parser.parse_args()
@@ -28,8 +37,7 @@ def main():
     answer,response=ask(q,context,ids)
     row.update(answer=answer,transport=response,valid=True,metrics=score(answer,q))
    except Exception as e:
-    row.update(valid=False,error=type(e).__name__+': '+str(e),elapsed_seconds=time.perf_counter()-start)
-    if hasattr(e,'response'):row['transport']=e.response
+    row.update(error_record(e,time.perf_counter()-start))
    with target.open('a',encoding='utf8') as f:f.write(json.dumps(row,ensure_ascii=False)+'\n')
    n+=1;print(rid,'valid='+str(row['valid']),flush=True)
    if args.limit and n>=args.limit:return
