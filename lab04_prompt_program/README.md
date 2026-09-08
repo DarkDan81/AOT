@@ -7,7 +7,10 @@ python -m pytest lab04_prompt_program/tests -q
 python -m lab04_prompt_program.run
 python -m lab04_prompt_program.evaluate
 python -m lab04_prompt_program.behavioral
+python -m lab04_prompt_program.sensitivity
 ```
+
+Последняя команда пересчитывает чувствительность F1 к трём исправлениям gold после независимой проверки. Первоначальный эталон и основные результаты сохранены; `data/gold_review_audit.md` описывает исправления, а `results/sensitivity.csv` показывает обе оценки. Новые запросы к LLM для этого анализа не нужны.
 
 Зависимости: pydantic >= 2, pytest и зависимости общего common.llm. LM Studio должен обслуживать модель, указанную в общем интерфейсе. Runner дописывает результаты по одному отзыву/версии и пропускает уже сохраненные пары. Для полного нового прогона сохраните прежний файл results/predictions.jsonl под другим именем.
 

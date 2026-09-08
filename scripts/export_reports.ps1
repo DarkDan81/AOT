@@ -1,4 +1,4 @@
-﻿param([string[]]$Folders=@('lab01_representations','lab02_annotation','lab04_prompt_program','lab05_mini_rag'))
+﻿param([string[]]$Folders=@('lab01_representations','lab02_annotation','lab03_classification','lab04_prompt_program','lab05_mini_rag','lab06_ai_detective'))
 foreach($folder in $Folders) {
  $wordApp=New-Object -ComObject Word.Application
  $wordApp.Visible=$false

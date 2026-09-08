@@ -17,3 +17,4 @@ ipykernel>=6
 python-docx>=1.1
 pymupdf>=1.24
 
+lmstudio==1.5.0
