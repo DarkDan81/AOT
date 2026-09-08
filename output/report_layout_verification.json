@@ -1,0 +1,114 @@
+{
+  "reports": [
+    {
+      "folder": "lab01_representations",
+      "pages": 9,
+      "a4": true,
+      "margins_cm": [
+        3,
+        1.5,
+        2,
+        2
+      ],
+      "normal_font": "Times New Roman 14 pt",
+      "required_sections": true,
+      "sha256": {
+        "report.docx": "10c32218b435e4bae2683db94260eeec2e09665470d89750f563e892d44f473b",
+        "report.pdf": "4d4cd0ffbac9fd104f427063a417e170092739f363ca6a25ed501a994e7b688c"
+      }
+    },
+    {
+      "folder": "lab02_annotation",
+      "pages": 8,
+      "a4": true,
+      "margins_cm": [
+        3,
+        1.5,
+        2,
+        2
+      ],
+      "normal_font": "Times New Roman 14 pt",
+      "required_sections": true,
+      "sha256": {
+        "report.docx": "16a7401709759ce2ab1108fc2136962ad361dd1b14a9e9665bd16736b4985594",
+        "report.pdf": "07582e3355fd55af98d10df28a482a311afe2f93ab7e7a83ce8615c8f14df077"
+      }
+    },
+    {
+      "folder": "lab03_classification",
+      "pages": 11,
+      "a4": true,
+      "margins_cm": [
+        3,
+        1.5,
+        2,
+        2
+      ],
+      "normal_font": "Times New Roman 14 pt",
+      "required_sections": true,
+      "sha256": {
+        "report.docx": "e8a0d102a2fabf23e2177402e61d557e6212305276ff454d1679a79742b3027b",
+        "report.pdf": "e498d8a86a77614c6b22e1abc35aa5d8907183c966a24ecc1db399c9d7aa572f"
+      }
+    },
+    {
+      "folder": "lab04_prompt_program",
+      "pages": 10,
+      "a4": true,
+      "margins_cm": [
+        3,
+        1.5,
+        2,
+        2
+      ],
+      "normal_font": "Times New Roman 14 pt",
+      "required_sections": true,
+      "sha256": {
+        "report.docx": "efde1f145a88e8617b4d7b0f1f6e707017619e163ac58cdd1f35dfeb2844faed",
+        "report.pdf": "6d6414ad325917567d472a084f437d566577475b48e3c0f0f96a2150475c117f"
+      }
+    },
+    {
+      "folder": "lab05_mini_rag",
+      "pages": 12,
+      "a4": true,
+      "margins_cm": [
+        3,
+        1.5,
+        2,
+        2
+      ],
+      "normal_font": "Times New Roman 14 pt",
+      "required_sections": true,
+      "sha256": {
+        "report.docx": "64015ec0909c03934026b42f6fa6e4df28f28743d958088162e7119ab2e2649b",
+        "report.pdf": "f7df8de7f91aa670f28ded8409a653aab30500ec70a9101ec494eba445fa56ee"
+      }
+    },
+    {
+      "folder": "lab06_ai_detective",
+      "pages": 10,
+      "a4": true,
+      "margins_cm": [
+        3,
+        1.5,
+        2,
+        2
+      ],
+      "normal_font": "Times New Roman 14 pt",
+      "required_sections": true,
+      "sha256": {
+        "report.docx": "6b078ecb4f6f459662e2068362ed35d06ca85a7aaff0a5a4abe35a7f3a94f206",
+        "report.pdf": "97d4b30c0210b248bce923058130e43ee3ac7b8422db57434dfc76357c923148"
+      }
+    }
+  ],
+  "annotation_guidelines": {
+    "pages": 2,
+    "sha256": {
+      "guidelines.docx": "f144c8053a60d449354aa025f94c38668c56ebe1a6940f467376a1d7c61ef128",
+      "guidelines.pdf": "d3e07d301d185195ca4e10646bb72afad2f71551038164005eb7518171211ffd"
+    }
+  },
+  "scope": "Structural preflight; page images reviewed separately."
+}

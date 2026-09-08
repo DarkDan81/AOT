@@ -31,7 +31,7 @@ def main():
    if rid in done:continue
    context,ids=build(mode,q['question'],v['documents'],v['claims'],selected)
    context_path=out/'contexts'/f'{rid}.txt';context_path.write_text(context,encoding='utf8')
-   row=dict(run_id=rid,variant_id=v['variant_id'],kind=v['kind'],mode=mode,question_id=q['question_id'],gold_status=q['gold_status'],context_claim_ids=ids,context_document_order=[d['document_id'] for d in v['documents']],context_sha256=hashlib.sha256(context.encode()).hexdigest(),context_file=str(context_path.relative_to(P)),review=v['review'])
+   row=dict(run_id=rid,variant_id=v['variant_id'],kind=v['kind'],mode=mode,question_id=q['question_id'],gold_status=q['gold_status'],context_claim_ids=ids,context_document_order=[d['document_id'] for d in v['documents']],context_sha256=hashlib.sha256(context.encode()).hexdigest(),context_file=context_path.relative_to(P).as_posix(),review=v['review'])
    start=time.perf_counter()
    try:
     answer,response=ask(q,context,ids)

@@ -1,0 +1,22 @@
+ВЕТВЬ [0, 0, 0]
+{"claim_id": "C28", "text": "Первое задание было поставлено в очередь в 17:55.", "document_id": "D07", "status": "direct", "path": [0, 0, 0], "event_time": "17:55"}
+{"claim_id": "C30", "text": "На репетиции использовался макет серверной.", "document_id": "D08", "status": "direct", "path": [0, 0, 0], "event_time": "99:99"}
+
+ВЕТВЬ [0, 0, 1]
+{"claim_id": "C02", "text": "Окно заморозки началось в 18:00.", "document_id": "D01", "status": "direct", "path": [0, 0, 1], "event_time": "18:00"}
+{"claim_id": "C05", "text": "В 18:10 Ладе предоставлено право чтения.", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:10"}
+{"claim_id": "C08", "text": "В 18:12 зарегистрирован успешный вход Лады.", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:12"}
+{"claim_id": "C07", "text": "В 18:15 сборку опубликовала служба «Шлюз».", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:15"}
+{"claim_id": "C06", "text": "В 18:20 Ладе впервые предоставлено право публикации.", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:20"}
+{"claim_id": "C04", "text": "Контрольная сборка опубликована в 18:25.", "document_id": "D01", "status": "direct", "path": [0, 0, 1], "event_time": "18:25"}
+
+ВЕТВЬ [1, 2, 1]
+{"claim_id": "C13", "text": "Илья сообщил: «В 18:15 Лада находилась в серверной».", "document_id": "D04", "status": "disputed", "path": [1, 2, 1], "event_time": "18:15"}
+{"claim_id": "C14", "text": "Илья сообщил: «В 18:15 индикатор был красным».", "document_id": "D04", "status": "disputed", "path": [1, 2, 1], "event_time": "18:15"}
+{"claim_id": "C17", "text": "Мира сообщила: «В 18:15 Лада не находилась в серверной».", "document_id": "D05", "status": "disputed", "path": [1, 2, 1], "event_time": "18:15"}
+{"claim_id": "C18", "text": "Мира сообщила: «В 18:15 индикатор был зелёным».", "document_id": "D05", "status": "disputed", "path": [1, 2, 1], "event_time": "18:15"}
+{"claim_id": "C37", "text": "Сава сообщил: «В 18:15 Лада находилась в серверной».", "document_id": "D10", "status": "disputed", "path": [1, 2, 1], "event_time": "99:99"}
+
+ВЕТВЬ [2, 0, 1]
+{"claim_id": "C11", "text": "Резервный ключ включён в 18:22.", "document_id": "D03", "status": "direct", "path": [2, 0, 1], "event_time": "18:22"}
+{"claim_id": "C12", "text": "Письменное разрешение координатора Веры получено в 18:24.", "document_id": "D03", "status": "direct", "path": [2, 0, 1], "event_time": "18:24"}

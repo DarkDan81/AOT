@@ -1,0 +1,25 @@
+{
+  "n_requests": 120,
+  "n_transport_responses": 120,
+  "n_valid": 120,
+  "models": [
+    "mistralai/ministral-3-14b-reasoning"
+  ],
+  "parameters": {
+    "max_tokens": 1500,
+    "seed": 42,
+    "structured_output": true,
+    "temperature": 0
+  },
+  "all_context_hashes_match": true,
+  "gold_hashes_unchanged_since_freeze": true,
+  "bc_claim_sets_identical": true,
+  "permuted_bc_contexts_byte_identical": true,
+  "finish_reasons": {
+    "stop": 120
+  },
+  "max_prompt_tokens": 14453,
+  "total_prompt_tokens": 688026,
+  "total_completion_tokens": 16231,
+  "total_request_seconds": 1030.2647865999961
+}

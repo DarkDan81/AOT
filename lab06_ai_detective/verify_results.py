@@ -12,7 +12,7 @@ for v in variants:
  for mode in 'ABC':
   r=lookup[v['variant_id']+'_'+mode]
   assert r['gold_status']==v['question']['gold_status']
-  context=(P/r['context_file']).read_text(encoding='utf8')
+  context=(P/r['context_file'].replace('\\','/')).read_text(encoding='utf8')
   assert hashlib.sha256(context.encode()).hexdigest()==r['context_sha256']
   assert r['context_document_order']==[d['document_id'] for d in v['documents']]
  b,c=lookup[v['variant_id']+'_B'],lookup[v['variant_id']+'_C']

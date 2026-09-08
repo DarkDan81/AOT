@@ -63,11 +63,11 @@ def cover(doc,num,title):
     clone(21,'2026')
 
 
-def table(doc,rows,number):
+def table(doc,rows,number,caption=None):
     rows=[[clean(c) for c in row] for row in rows]
     if len(rows)<2:return
     n=len(rows[0]);rows=[r for r in rows if len(r)==n]
-    cap=paragraph(doc,f'Таблица {number} — Результаты сравнения',indent=False,align=WD_ALIGN_PARAGRAPH.LEFT)
+    cap=paragraph(doc,caption or f'Таблица {number} — Результаты сравнения',indent=False,align=WD_ALIGN_PARAGRAPH.LEFT)
     cap.paragraph_format.keep_with_next=True
     tab=doc.add_table(rows=1,cols=n);tab.style='Table Grid';tab.autofit=False
     first=0.32 if n<=5 else 0.22
@@ -108,7 +108,7 @@ def build(folder):
         s=doc.styles[name];s.font.name='Times New Roman';s.font.size=Pt(14);s.font.color.rgb=RGBColor(0,0,0)
     doc.core_properties.author='Дущенко Даниил Александрович';doc.core_properties.title=f'Лабораторная работа № {num}. {title}';doc.core_properties.subject='Автоматическая обработка текста';doc.core_properties.comments='Подготовлено с помощью ИИ; результаты и ограничения описаны в отчете.'
     cover(doc,num,title);add_contents(doc)
-    lines=src.read_text(encoding='utf-8-sig').splitlines();i=0;sub=0;main=False;intro=False;tbl=0;fig=0;in_code=False
+    lines=src.read_text(encoding='utf-8-sig').splitlines();i=0;sub=0;main=False;intro=False;tbl=0;fig=0;in_code=False;pending_caption=None
     while i<len(lines):
         line=lines[i].strip();i+=1
         if not line or line.startswith('# '):continue
@@ -129,6 +129,8 @@ def build(folder):
                 if not main:heading(doc,'1 Выполнение работы',newpage=True);main=True
                 sub+=1;heading(doc,f'1.{sub} {text}',level=2)
             continue
+        if re.match(r'^Таблица\s+\d+\s+[—–-]',line):
+            pending_caption=line;continue
         if line.startswith('|'):
             rows=[]
             while True:
@@ -136,7 +138,7 @@ def build(folder):
                 if not all(re.fullmatch(r'[:\- ]+',v) for v in vals):rows.append(vals)
                 if i>=len(lines) or not lines[i].strip().startswith('|'):break
                 line=lines[i].strip();i+=1
-            tbl+=1;table(doc,rows,tbl);continue
+            tbl+=1;table(doc,rows,tbl,caption=pending_caption);pending_caption=None;continue
         match=re.fullmatch(r'!\[([^\]]*)\]\(([^)]+)\)',line)
         if match:
             img=folder/match.group(2)

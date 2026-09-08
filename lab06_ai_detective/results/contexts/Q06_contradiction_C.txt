@@ -1,0 +1,28 @@
+ВЕТВЬ [0, 0, 1]
+{"claim_id": "C02", "text": "Окно заморозки началось в 18:00.", "document_id": "D01", "status": "direct", "path": [0, 0, 1], "event_time": "18:00"}
+{"claim_id": "C05", "text": "В 18:10 Ладе предоставлено право чтения.", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:10"}
+{"claim_id": "C08", "text": "В 18:12 зарегистрирован успешный вход Лады.", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:12"}
+{"claim_id": "C07", "text": "В 18:15 сборку опубликовала служба «Шлюз».", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:15"}
+{"claim_id": "C06", "text": "В 18:20 Ладе впервые предоставлено право публикации.", "document_id": "D02", "status": "direct", "path": [0, 0, 1], "event_time": "18:20"}
+{"claim_id": "C04", "text": "Контрольная сборка опубликована в 18:25.", "document_id": "D01", "status": "direct", "path": [0, 0, 1], "event_time": "18:25"}
+{"claim_id": "C03", "text": "Окно заморозки закончилось в 19:00.", "document_id": "D01", "status": "direct", "path": [0, 0, 1], "event_time": "19:00"}
+
+ВЕТВЬ [0, 0, 2]
+{"claim_id": "C01", "text": "Инцидент турнира «Орион» зарегистрирован 14 марта 2026 года.", "document_id": "D01", "status": "direct", "path": [0, 0, 2], "event_time": "99:99"}
+{"claim_id": "C26", "text": "Контрольная сумма первого выпуска равна OR-15.", "document_id": "D07", "status": "direct", "path": [0, 0, 2], "event_time": "99:99"}
+{"claim_id": "C27", "text": "Контрольная сумма второго выпуска равна OR-25.", "document_id": "D07", "status": "direct", "path": [0, 0, 2], "event_time": "99:99"}
+
+ВЕТВЬ [1, 1, 2]
+{"claim_id": "C16", "text": "Илья сообщил: «После запуска я ушёл в зал».", "document_id": "D04", "status": "reported", "path": [1, 1, 2], "event_time": "99:99"}
+
+ВЕТВЬ [1, 2, 1]
+{"claim_id": "C37", "text": "Независимый журнал публикации сообщает: контрольная сборка опубликована в 18:23, а не в 18:25.", "document_id": "D10", "status": "disputed", "path": [1, 2, 1], "event_time": "99:99"}
+
+ВЕТВЬ [2, 0, 1]
+{"claim_id": "C11", "text": "Резервный ключ включён в 18:22.", "document_id": "D03", "status": "direct", "path": [2, 0, 1], "event_time": "18:22"}
+
+ВЕТВЬ [2, 0, 2]
+{"claim_id": "C09", "text": "Во время заморозки публикация запрещена.", "document_id": "D03", "status": "direct", "path": [2, 0, 2], "event_time": "99:99"}
+
+ВЕТВЬ [2, 2, 2]
+{"claim_id": "C10", "text": "Исключение требует одновременно резервного ключа и письменного разрешения координатора.", "document_id": "D03", "status": "direct", "path": [2, 2, 2], "event_time": "99:99"}

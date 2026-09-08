@@ -1,0 +1,7 @@
+kind,mode,n,joint_transition_accuracy
+contradiction,A,8,0.5
+contradiction,B,8,0.375
+contradiction,C,8,0.25
+deletion,A,4,0.5
+deletion,B,4,0.0
+deletion,C,4,0.0

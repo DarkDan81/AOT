@@ -1,0 +1,16 @@
+{
+  "exceptions": 0,
+  "question": "Q01",
+  "modes": [
+    "A",
+    "B",
+    "C"
+  ],
+  "displayed_evidence_f1": [
+    0,
+    1,
+    1
+  ],
+  "mode_B_status": "entailed",
+  "mode_B_confidence": "1.00"
+}

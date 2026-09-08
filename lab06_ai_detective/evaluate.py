@@ -20,8 +20,11 @@ for r in rows:
  b=base.get((r['question_id'],r['mode']))
  if not b or not b['valid']:continue
  a,ba=r['answer'],b['answer']
- st.append(dict(kind=r['kind'],mode=r['mode'],question_id=r['question_id'],status_changed=a['status']!=ba['status'],answer_changed=a['answer']!=ba['answer'],evidence_stability_f1=evidence_metrics(a['evidence_ids'],ba['evidence_ids'])[2],expected_status_correct=r['metrics']['status_correct']))
-pd.DataFrame(st).to_csv(P/'results/stability.csv',index=False)
+ st.append(dict(kind=r['kind'],mode=r['mode'],question_id=r['question_id'],status_changed=a['status']!=ba['status'],answer_changed=a['answer']!=ba['answer'],evidence_stability_f1=evidence_metrics(a['evidence_ids'],ba['evidence_ids'])[2],expected_status_correct=r['metrics']['status_correct'],gold_status_changed=r['gold_status']!=b['gold_status'],baseline_status_correct=b['metrics']['status_correct'],joint_transition_correct=int(bool(r['metrics']['status_correct'] and b['metrics']['status_correct']))))
+stdf=pd.DataFrame(st)
+stdf.to_csv(P/'results/stability.csv',index=False)
+stdf.groupby(['kind','mode']).agg(n=('question_id','size'),status_changed=('status_changed','mean'),evidence_stability_f1=('evidence_stability_f1','mean'),expected_status_accuracy=('expected_status_correct','mean'),joint_transition_accuracy=('joint_transition_correct','mean')).to_csv(P/'results/stability_summary.csv')
+stdf[stdf.gold_status_changed].groupby(['kind','mode']).agg(n=('question_id','size'),joint_transition_accuracy=('joint_transition_correct','mean')).to_csv(P/'results/changed_gold_transitions.csv')
 # Calibration by fixed confidence bins; descriptive only for a small synthetic sample.
 df['confidence_bin']=pd.cut(df.confidence,[0,.5,.8,1],include_lowest=True)
 df.groupby(['mode','confidence_bin'],observed=True).agg(n=('run_id','size'),mean_confidence=('confidence','mean'),accuracy=('status_correct','mean')).to_csv(P/'results/calibration.csv')

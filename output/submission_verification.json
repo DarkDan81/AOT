@@ -1,0 +1,241 @@
+{
+  "checked_at_utc": "2026-09-08T16:00:00.664295+00:00",
+  "root": "E:\\AOT-work",
+  "complete": true,
+  "checks_passed": 22,
+  "checks_total": 22,
+  "pending_labs": [],
+  "checks": [
+    {
+      "lab": 1,
+      "check": "150_texts_9_variants_3_classes",
+      "status": "passed",
+      "detail": {
+        "texts": 150,
+        "transformations": 9,
+        "classes": [
+          "negative",
+          "neutral",
+          "positive"
+        ]
+      }
+    },
+    {
+      "lab": 1,
+      "check": "executed_notebook",
+      "status": "passed",
+      "detail": {
+        "executed_code_cells": 9
+      }
+    },
+    {
+      "lab": 2,
+      "check": "90_initial_30_revised_triple_labels_same30_metrics",
+      "status": "passed",
+      "detail": {
+        "initial": 90,
+        "revised_same_ids": 30,
+        "annotators": 3,
+        "recomputed_metrics": 15
+      }
+    },
+    {
+      "lab": 3,
+      "check": "data_train",
+      "status": "passed",
+      "detail": {
+        "rows": 3000,
+        "unique_ids": 3000
+      }
+    },
+    {
+      "lab": 3,
+      "check": "data_validation",
+      "status": "passed",
+      "detail": {
+        "rows": 500,
+        "unique_ids": 500
+      }
+    },
+    {
+      "lab": 3,
+      "check": "data_test",
+      "status": "passed",
+      "detail": {
+        "rows": 500,
+        "unique_ids": 500
+      }
+    },
+    {
+      "lab": 3,
+      "check": "data_stress",
+      "status": "passed",
+      "detail": {
+        "rows": 100,
+        "unique_ids": 100
+      }
+    },
+    {
+      "lab": 3,
+      "check": "1200_actual_llm_responses",
+      "status": "passed",
+      "detail": {
+        "responses": 1200,
+        "valid": 1200
+      }
+    },
+    {
+      "lab": 3,
+      "check": "600_predictions_four_methods",
+      "status": "passed",
+      "detail": {
+        "rows": 600,
+        "methods": [
+          "majority",
+          "tfidf_lr",
+          "zero_shot",
+          "few_shot"
+        ]
+      }
+    },
+    {
+      "lab": 4,
+      "check": "50_reviews_two_versions_exactly_one_conditional_retry",
+      "status": "passed",
+      "detail": {
+        "reviews": 50,
+        "predictions": 100,
+        "retries": 24
+      }
+    },
+    {
+      "lab": 5,
+      "check": "30_documents_100_questions_200_main_responses",
+      "status": "passed",
+      "detail": {
+        "documents": 30,
+        "paragraphs_min": 24,
+        "paragraphs_max": 24,
+        "questions": 100,
+        "unanswerable": 30,
+        "main_responses": 200
+      }
+    },
+    {
+      "lab": 6,
+      "check": "documents_claims_questions",
+      "status": "passed",
+      "detail": {
+        "documents": 9,
+        "words": 5046,
+        "claims": 36,
+        "questions": 12,
+        "types": {
+          "direct": 2,
+          "multi_hop": 2,
+          "temporal": 2,
+          "rule_exception": 2,
+          "contradiction": 2,
+          "insufficient": 2
+        }
+      }
+    },
+    {
+      "lab": 6,
+      "check": "120_responses_and_equal_bc_contexts",
+      "status": "passed",
+      "detail": {
+        "responses": 120,
+        "valid": 120,
+        "identical_bc_pairs": 40
+      }
+    },
+    {
+      "lab": 1,
+      "check": "docx_and_pdf",
+      "status": "passed",
+      "detail": {
+        "docx_bytes": 203732,
+        "pdf_bytes": 344032
+      }
+    },
+    {
+      "lab": 2,
+      "check": "docx_and_pdf",
+      "status": "passed",
+      "detail": {
+        "docx_bytes": 36146,
+        "pdf_bytes": 183606
+      }
+    },
+    {
+      "lab": 3,
+      "check": "docx_and_pdf",
+      "status": "passed",
+      "detail": {
+        "docx_bytes": 40289,
+        "pdf_bytes": 208811
+      }
+    },
+    {
+      "lab": 4,
+      "check": "docx_and_pdf",
+      "status": "passed",
+      "detail": {
+        "docx_bytes": 38949,
+        "pdf_bytes": 203388
+      }
+    },
+    {
+      "lab": 5,
+      "check": "docx_and_pdf",
+      "status": "passed",
+      "detail": {
+        "docx_bytes": 39854,
+        "pdf_bytes": 214674
+      }
+    },
+    {
+      "lab": 6,
+      "check": "docx_and_pdf",
+      "status": "passed",
+      "detail": {
+        "docx_bytes": 38123,
+        "pdf_bytes": 197979
+      }
+    },
+    {
+      "lab": 1,
+      "check": "report_word_limit",
+      "status": "passed",
+      "detail": {
+        "main_body_words": 752,
+        "minimum": 700,
+        "maximum": 1000,
+        "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"
+      }
+    },
+    {
+      "lab": 2,
+      "check": "report_word_limit",
+      "status": "passed",
+      "detail": {
+        "main_body_words": 782,
+        "minimum": 0,
+        "maximum": 1200,
+        "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"
+      }
+    },
+    {
+      "lab": 6,
+      "check": "report_word_limit",
+      "status": "passed",
+      "detail": {
+        "main_body_words": 1136,
+        "minimum": 0,
+        "maximum": 1500,
+        "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"
+      }
+    }
+  ]
+}

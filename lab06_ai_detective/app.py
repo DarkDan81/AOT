@@ -1,4 +1,4 @@
-import json,pathlib,sys,hashlib
+﻿import json,pathlib,sys,hashlib
 import pandas as pd
 import streamlit as st
 P=pathlib.Path(__file__).parent;sys.path.insert(0,str(P));sys.path.insert(0,str(P.parent))
@@ -84,11 +84,12 @@ st.subheader('Сравнение сохранённых режимов')
 comparison=[]
 for r in saved:
  if r['variant_id']!=v['variant_id']:continue
- t=r.get('transport',{});answer=r.get('answer',{})
+ t=r.get('transport') or {};answer=r.get('answer',{})
  comparison.append({'Режим':r['mode'],'Статус':answer.get('status','INVALID'),'Evidence F1':r.get('metrics',{}).get('evidence_f1'),'Confidence':answer.get('confidence'),'Токены':t.get('usage',{}).get('total_tokens'),'Секунды':t.get('elapsed_seconds')})
 if comparison and not custom:st.dataframe(pd.DataFrame(comparison),hide_index=True)
 else:st.info('Сохранённые результаты не найдены или неприменимы к загруженному досье.')
 st.caption('Стресс-варианты предварительно проверены агентами. Такая проверка не выдаётся за проверку реальными участниками.')
+
 
 
 
