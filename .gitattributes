@@ -1,0 +1,7 @@
+# Frozen datasets use byte-level SHA256. Preserve their original line endings
+# on Windows and Linux so a clone verifies against the recorded fingerprints.
+lab*/data/** -text
+lab05_mini_rag/evaluation_private/** -text
+lab05_mini_rag/prompt.txt -text
+lab05_mini_rag/challenge/** -text
+lab05_mini_rag/challenge_replication/** -text
