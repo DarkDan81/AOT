@@ -25,6 +25,8 @@ def paragraph(doc,text='',style=None,align=None,indent=True):
     p=doc.add_paragraph(style=style);p.paragraph_format.first_line_indent=Cm(1.25 if indent else 0)
     p.paragraph_format.space_after=Pt(0);p.paragraph_format.space_before=Pt(0);p.paragraph_format.line_spacing=1.5
     p.alignment=align if align is not None else WD_ALIGN_PARAGRAPH.JUSTIFY
+    if text.startswith(('Дущенко Даниил Александрович','Коваленко Евгений Юрьевич')):
+        p.paragraph_format.keep_together=True
     font(p.add_run(clean(text)))
     return p
 
@@ -114,7 +116,7 @@ def build(folder):
     while i<len(lines):
         line=lines[i].strip();i+=1
         if not line or line.startswith('# '):continue
-        if line.startswith('Дисциплина:') or line.startswith('Дущенко Даниил'):continue
+        if line.startswith('Дисциплина:'):continue
         if line.startswith('```'):
             in_code=not in_code;continue
         if in_code:

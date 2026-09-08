@@ -32,6 +32,9 @@ def check(folder):
         assert 'К3341' in cover and 'Гусарова Наталия Федоровна' in cover
         assert 'Дущенко Даниил Александрович' in cover
         assert ('Коваленко Евгений Юрьевич' in cover) == (int(folder.name[3:5]) not in {1,3,4})
+        if int(folder.name[3:5]) in {2,5,6}:
+            assert text.count('Дущенко Даниил Александрович') >= 2
+            assert text.count('Коваленко Евгений Юрьевич') >= 2
         assert all(s in text for s in ['СОДЕРЖАНИЕ', 'ВВЕДЕНИЕ', 'ЗАКЛЮЧЕНИЕ', 'СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ'])
         assert not any(s in text for s in ['Содержание обновляется', 'EMPIRICAL_', 'КХХХХХ', 'PrezGen'])
         for i, page in enumerate(rendered, 1):

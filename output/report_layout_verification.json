@@ -19,7 +19,7 @@
     },
     {
       "folder": "lab02_annotation",
-      "pages": 8,
+      "pages": 9,
       "a4": true,
       "margins_cm": [
         3,
@@ -30,8 +30,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "57dd00759cf0af9ec545502b8f05b43d8a9afd875feb584463788130cdb49ce5",
-        "report.pdf": "3bf94f9d36364718c05c690cd826f41a79a25f65f0aef70eac408e8570f12290"
+        "report.docx": "2885c640928711edf79fb08d9f04a19dffa9deef9cb27892c8ff1e739862db58",
+        "report.pdf": "5d634deb43a4c855eb107a06f687962ded1c84815ea91ab2bb87f62e8482eb0c"
       }
     },
     {
@@ -81,8 +81,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "dc1dae8c3390f75a017aad4ad8ab928d776099cbd31153bf2465ae2ef7b254ac",
-        "report.pdf": "42c0b29c761bd8d24c5bd12da5e90bc297b48cb1feb621e359ce128abc004e77"
+        "report.docx": "408d5623bca17a087d21fee8136e6b984f303220f99e3b746116c1038db05171",
+        "report.pdf": "89a415f2b3ab75033c1423a09e7a10a52ea3c32ffb128ffa0e1d2d1e39161554"
       }
     },
     {
@@ -98,8 +98,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "a0db8a3231f2f3b6243f45f1f566da23aabe7ee5b2d72c6008dd7bdc566b9f81",
-        "report.pdf": "b62a52dc7f50291faf4da1be47d0aa665d9e92819962e51092f83709641d13a1"
+        "report.docx": "1338bbf58b69aa7642d1280df049307f2189e8eb60709badf60ff4093e34a518",
+        "report.pdf": "15fa3a84e7992bd557c0b4983a152f0c35f9f3cb5f88b9be7951bc9d1ca16295"
       }
     }
   ],
