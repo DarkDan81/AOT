@@ -1,0 +1,8 @@
+{
+  "model": "intfloat/multilingual-e5-small",
+  "device": "cpu",
+  "prefix": "query: for both sides (symmetric similarity)",
+  "normalize_embeddings": true,
+  "max_seq_length": 512,
+  "dimensions": 384
+}

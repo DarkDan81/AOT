@@ -1,0 +1,9 @@
+{
+  "C": 2.0,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "random_state": 42,
+  "selection": "validation macro F1; first wins ties"
+}

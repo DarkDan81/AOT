@@ -1,0 +1,40 @@
+{"question_id": "Q061", "document_id": "D19", "question": "Кто директор архива?", "split": "test", "answer": "Директор-19", "answerable": true, "evidence_ids": [2]}
+{"question_id": "Q062", "document_id": "D20", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test", "answer": "6", "answerable": true, "evidence_ids": [3]}
+{"question_id": "Q063", "document_id": "D21", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test", "answer": "Зал-120", "answerable": true, "evidence_ids": [4]}
+{"question_id": "Q064", "document_id": "D19", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test", "answer": "38", "answerable": true, "evidence_ids": [9]}
+{"question_id": "Q065", "document_id": "D20", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test", "answer": "A119, B219, C319, D419, E519, F619", "answerable": true, "evidence_ids": [16, 17, 18, 19, 20, 21]}
+{"question_id": "Q066", "document_id": "D21", "question": "У кого находится ключ от резервного шкафа?", "split": "test", "answer": "Хранитель-21", "answerable": true, "evidence_ids": [8]}
+{"question_id": "Q067", "document_id": "D19", "question": "Какой адрес используют для подачи заявок?", "split": "test", "answer": "request19@example.invalid", "answerable": true, "evidence_ids": [14]}
+{"question_id": "Q068", "document_id": "D20", "question": "Какой номер личного телефона директора?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q069", "document_id": "D21", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q070", "document_id": "D19", "question": "В каком году родился хранитель резервного ключа?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q071", "document_id": "D22", "question": "Кто директор архива?", "split": "test", "answer": "Директор-22", "answerable": true, "evidence_ids": [2]}
+{"question_id": "Q072", "document_id": "D23", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test", "answer": "4", "answerable": true, "evidence_ids": [3]}
+{"question_id": "Q073", "document_id": "D24", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test", "answer": "Зал-123", "answerable": true, "evidence_ids": [4]}
+{"question_id": "Q074", "document_id": "D22", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test", "answer": "41", "answerable": true, "evidence_ids": [9]}
+{"question_id": "Q075", "document_id": "D23", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test", "answer": "A122, B222, C322, D422, E522, F622", "answerable": true, "evidence_ids": [16, 17, 18, 19, 20, 21]}
+{"question_id": "Q076", "document_id": "D24", "question": "У кого находится ключ от резервного шкафа?", "split": "test", "answer": "Хранитель-24", "answerable": true, "evidence_ids": [8]}
+{"question_id": "Q077", "document_id": "D22", "question": "Какой адрес используют для подачи заявок?", "split": "test", "answer": "request22@example.invalid", "answerable": true, "evidence_ids": [14]}
+{"question_id": "Q078", "document_id": "D23", "question": "Какой номер личного телефона директора?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q079", "document_id": "D24", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q080", "document_id": "D22", "question": "В каком году родился хранитель резервного ключа?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q081", "document_id": "D25", "question": "Кто директор архива?", "split": "test", "answer": "Директор-25", "answerable": true, "evidence_ids": [2]}
+{"question_id": "Q082", "document_id": "D26", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test", "answer": "2", "answerable": true, "evidence_ids": [3]}
+{"question_id": "Q083", "document_id": "D27", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test", "answer": "Зал-126", "answerable": true, "evidence_ids": [4]}
+{"question_id": "Q084", "document_id": "D25", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test", "answer": "44", "answerable": true, "evidence_ids": [9]}
+{"question_id": "Q085", "document_id": "D26", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test", "answer": "A125, B225, C325, D425, E525, F625", "answerable": true, "evidence_ids": [16, 17, 18, 19, 20, 21]}
+{"question_id": "Q086", "document_id": "D27", "question": "У кого находится ключ от резервного шкафа?", "split": "test", "answer": "Хранитель-27", "answerable": true, "evidence_ids": [8]}
+{"question_id": "Q087", "document_id": "D25", "question": "Какой адрес используют для подачи заявок?", "split": "test", "answer": "request25@example.invalid", "answerable": true, "evidence_ids": [14]}
+{"question_id": "Q088", "document_id": "D26", "question": "Какой номер личного телефона директора?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q089", "document_id": "D27", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q090", "document_id": "D25", "question": "В каком году родился хранитель резервного ключа?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q091", "document_id": "D28", "question": "Кто директор архива?", "split": "test", "answer": "Директор-28", "answerable": true, "evidence_ids": [2]}
+{"question_id": "Q092", "document_id": "D29", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test", "answer": "5", "answerable": true, "evidence_ids": [3]}
+{"question_id": "Q093", "document_id": "D30", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test", "answer": "Зал-129", "answerable": true, "evidence_ids": [4]}
+{"question_id": "Q094", "document_id": "D28", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test", "answer": "47", "answerable": true, "evidence_ids": [9]}
+{"question_id": "Q095", "document_id": "D29", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test", "answer": "A128, B228, C328, D428, E528, F628", "answerable": true, "evidence_ids": [16, 17, 18, 19, 20, 21]}
+{"question_id": "Q096", "document_id": "D30", "question": "У кого находится ключ от резервного шкафа?", "split": "test", "answer": "Хранитель-30", "answerable": true, "evidence_ids": [8]}
+{"question_id": "Q097", "document_id": "D28", "question": "Какой адрес используют для подачи заявок?", "split": "test", "answer": "request28@example.invalid", "answerable": true, "evidence_ids": [14]}
+{"question_id": "Q098", "document_id": "D29", "question": "Какой номер личного телефона директора?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q099", "document_id": "D30", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}
+{"question_id": "Q100", "document_id": "D28", "question": "В каком году родился хранитель резервного ключа?", "split": "test", "answer": null, "answerable": false, "evidence_ids": []}

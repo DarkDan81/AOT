@@ -1,0 +1,3 @@
+﻿completion_tokens,f1,final_valid,first_contract_valid,fn,fp,json_first_valid,n,precision,prompt_tokens,recall,retries,seconds,tp,unsupported_final,unsupported_initial,version
+7385,0.523809523809524,45,39,159,201,50,50,0.49624060150375937,12131,0.5546218487394958,11,331.002525499998,198,60,70,version_1
+8587,0.5751295336787564,42,37,135,193,50,50,0.5349397590361445,46717,0.6218487394957983,13,382.5412829999998,222,0,2,version_2

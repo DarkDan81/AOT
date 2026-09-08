@@ -1,0 +1,100 @@
+{"question_id": "Q001", "document_id": "D01", "question": "Кто директор архива?", "split": "train"}
+{"question_id": "Q002", "document_id": "D02", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "train"}
+{"question_id": "Q003", "document_id": "D03", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "train"}
+{"question_id": "Q004", "document_id": "D01", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "train"}
+{"question_id": "Q005", "document_id": "D02", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "train"}
+{"question_id": "Q006", "document_id": "D03", "question": "У кого находится ключ от резервного шкафа?", "split": "train"}
+{"question_id": "Q007", "document_id": "D01", "question": "Какой адрес используют для подачи заявок?", "split": "train"}
+{"question_id": "Q008", "document_id": "D02", "question": "Какой номер личного телефона директора?", "split": "train"}
+{"question_id": "Q009", "document_id": "D03", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "train"}
+{"question_id": "Q010", "document_id": "D01", "question": "В каком году родился хранитель резервного ключа?", "split": "train"}
+{"question_id": "Q011", "document_id": "D04", "question": "Кто директор архива?", "split": "train"}
+{"question_id": "Q012", "document_id": "D05", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "train"}
+{"question_id": "Q013", "document_id": "D06", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "train"}
+{"question_id": "Q014", "document_id": "D04", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "train"}
+{"question_id": "Q015", "document_id": "D05", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "train"}
+{"question_id": "Q016", "document_id": "D06", "question": "У кого находится ключ от резервного шкафа?", "split": "train"}
+{"question_id": "Q017", "document_id": "D04", "question": "Какой адрес используют для подачи заявок?", "split": "train"}
+{"question_id": "Q018", "document_id": "D05", "question": "Какой номер личного телефона директора?", "split": "train"}
+{"question_id": "Q019", "document_id": "D06", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "train"}
+{"question_id": "Q020", "document_id": "D04", "question": "В каком году родился хранитель резервного ключа?", "split": "train"}
+{"question_id": "Q021", "document_id": "D07", "question": "Кто директор архива?", "split": "train"}
+{"question_id": "Q022", "document_id": "D08", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "train"}
+{"question_id": "Q023", "document_id": "D09", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "train"}
+{"question_id": "Q024", "document_id": "D07", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "train"}
+{"question_id": "Q025", "document_id": "D08", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "train"}
+{"question_id": "Q026", "document_id": "D09", "question": "У кого находится ключ от резервного шкафа?", "split": "train"}
+{"question_id": "Q027", "document_id": "D07", "question": "Какой адрес используют для подачи заявок?", "split": "train"}
+{"question_id": "Q028", "document_id": "D08", "question": "Какой номер личного телефона директора?", "split": "train"}
+{"question_id": "Q029", "document_id": "D09", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "train"}
+{"question_id": "Q030", "document_id": "D07", "question": "В каком году родился хранитель резервного ключа?", "split": "train"}
+{"question_id": "Q031", "document_id": "D10", "question": "Кто директор архива?", "split": "train"}
+{"question_id": "Q032", "document_id": "D11", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "train"}
+{"question_id": "Q033", "document_id": "D12", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "train"}
+{"question_id": "Q034", "document_id": "D10", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "train"}
+{"question_id": "Q035", "document_id": "D11", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "train"}
+{"question_id": "Q036", "document_id": "D12", "question": "У кого находится ключ от резервного шкафа?", "split": "train"}
+{"question_id": "Q037", "document_id": "D10", "question": "Какой адрес используют для подачи заявок?", "split": "train"}
+{"question_id": "Q038", "document_id": "D11", "question": "Какой номер личного телефона директора?", "split": "train"}
+{"question_id": "Q039", "document_id": "D12", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "train"}
+{"question_id": "Q040", "document_id": "D10", "question": "В каком году родился хранитель резервного ключа?", "split": "train"}
+{"question_id": "Q041", "document_id": "D13", "question": "Кто директор архива?", "split": "train"}
+{"question_id": "Q042", "document_id": "D14", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "train"}
+{"question_id": "Q043", "document_id": "D15", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "train"}
+{"question_id": "Q044", "document_id": "D13", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "train"}
+{"question_id": "Q045", "document_id": "D14", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "train"}
+{"question_id": "Q046", "document_id": "D15", "question": "У кого находится ключ от резервного шкафа?", "split": "train"}
+{"question_id": "Q047", "document_id": "D13", "question": "Какой адрес используют для подачи заявок?", "split": "train"}
+{"question_id": "Q048", "document_id": "D14", "question": "Какой номер личного телефона директора?", "split": "train"}
+{"question_id": "Q049", "document_id": "D15", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "train"}
+{"question_id": "Q050", "document_id": "D13", "question": "В каком году родился хранитель резервного ключа?", "split": "train"}
+{"question_id": "Q051", "document_id": "D16", "question": "Кто директор архива?", "split": "train"}
+{"question_id": "Q052", "document_id": "D17", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "train"}
+{"question_id": "Q053", "document_id": "D18", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "train"}
+{"question_id": "Q054", "document_id": "D16", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "train"}
+{"question_id": "Q055", "document_id": "D17", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "train"}
+{"question_id": "Q056", "document_id": "D18", "question": "У кого находится ключ от резервного шкафа?", "split": "train"}
+{"question_id": "Q057", "document_id": "D16", "question": "Какой адрес используют для подачи заявок?", "split": "train"}
+{"question_id": "Q058", "document_id": "D17", "question": "Какой номер личного телефона директора?", "split": "train"}
+{"question_id": "Q059", "document_id": "D18", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "train"}
+{"question_id": "Q060", "document_id": "D16", "question": "В каком году родился хранитель резервного ключа?", "split": "train"}
+{"question_id": "Q061", "document_id": "D19", "question": "Кто директор архива?", "split": "test"}
+{"question_id": "Q062", "document_id": "D20", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test"}
+{"question_id": "Q063", "document_id": "D21", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test"}
+{"question_id": "Q064", "document_id": "D19", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test"}
+{"question_id": "Q065", "document_id": "D20", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test"}
+{"question_id": "Q066", "document_id": "D21", "question": "У кого находится ключ от резервного шкафа?", "split": "test"}
+{"question_id": "Q067", "document_id": "D19", "question": "Какой адрес используют для подачи заявок?", "split": "test"}
+{"question_id": "Q068", "document_id": "D20", "question": "Какой номер личного телефона директора?", "split": "test"}
+{"question_id": "Q069", "document_id": "D21", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test"}
+{"question_id": "Q070", "document_id": "D19", "question": "В каком году родился хранитель резервного ключа?", "split": "test"}
+{"question_id": "Q071", "document_id": "D22", "question": "Кто директор архива?", "split": "test"}
+{"question_id": "Q072", "document_id": "D23", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test"}
+{"question_id": "Q073", "document_id": "D24", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test"}
+{"question_id": "Q074", "document_id": "D22", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test"}
+{"question_id": "Q075", "document_id": "D23", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test"}
+{"question_id": "Q076", "document_id": "D24", "question": "У кого находится ключ от резервного шкафа?", "split": "test"}
+{"question_id": "Q077", "document_id": "D22", "question": "Какой адрес используют для подачи заявок?", "split": "test"}
+{"question_id": "Q078", "document_id": "D23", "question": "Какой номер личного телефона директора?", "split": "test"}
+{"question_id": "Q079", "document_id": "D24", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test"}
+{"question_id": "Q080", "document_id": "D22", "question": "В каком году родился хранитель резервного ключа?", "split": "test"}
+{"question_id": "Q081", "document_id": "D25", "question": "Кто директор архива?", "split": "test"}
+{"question_id": "Q082", "document_id": "D26", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test"}
+{"question_id": "Q083", "document_id": "D27", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test"}
+{"question_id": "Q084", "document_id": "D25", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test"}
+{"question_id": "Q085", "document_id": "D26", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test"}
+{"question_id": "Q086", "document_id": "D27", "question": "У кого находится ключ от резервного шкафа?", "split": "test"}
+{"question_id": "Q087", "document_id": "D25", "question": "Какой адрес используют для подачи заявок?", "split": "test"}
+{"question_id": "Q088", "document_id": "D26", "question": "Какой номер личного телефона директора?", "split": "test"}
+{"question_id": "Q089", "document_id": "D27", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test"}
+{"question_id": "Q090", "document_id": "D25", "question": "В каком году родился хранитель резервного ключа?", "split": "test"}
+{"question_id": "Q091", "document_id": "D28", "question": "Кто директор архива?", "split": "test"}
+{"question_id": "Q092", "document_id": "D29", "question": "За сколько рабочих дней обрабатывают обычную заявку на просмотр?", "split": "test"}
+{"question_id": "Q093", "document_id": "D30", "question": "Куда направляют людей, если прорвало трубу и возникла авария водоснабжения?", "split": "test"}
+{"question_id": "Q094", "document_id": "D28", "question": "Каков актуальный лимит копирования страниц за посещение?", "split": "test"}
+{"question_id": "Q095", "document_id": "D29", "question": "Перечислите идентификаторы разрешений всех шести этапов А, Б, В, Г, Д, Е по порядку.", "split": "test"}
+{"question_id": "Q096", "document_id": "D30", "question": "У кого находится ключ от резервного шкафа?", "split": "test"}
+{"question_id": "Q097", "document_id": "D28", "question": "Какой адрес используют для подачи заявок?", "split": "test"}
+{"question_id": "Q098", "document_id": "D29", "question": "Какой номер личного телефона директора?", "split": "test"}
+{"question_id": "Q099", "document_id": "D30", "question": "Какую сумму бюджета утвердили на 2026 год?", "split": "test"}
+{"question_id": "Q100", "document_id": "D28", "question": "В каком году родился хранитель резервного ключа?", "split": "test"}

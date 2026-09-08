@@ -1,0 +1,40 @@
+{
+  "random": {
+    "rows": 21268,
+    "nulls": {
+      "label": 0,
+      "text": 0
+    },
+    "duplicate_texts": 74,
+    "sha256": "bfa850dd0548aaea682bcfa3f1106763c4ed1ed8f5341cec75fed61fda8ff2f3",
+    "url": "https://raw.githubusercontent.com/strawberrypie/rusentiment/master/Dataset/rusentiment_random_posts.csv"
+  },
+  "test": {
+    "rows": 500,
+    "classes": {
+      "neutral": 321,
+      "positive": 121,
+      "negative": 58
+    },
+    "sha256": "cf6df43f217c48eb7e5e5f96e3eabe212b58f71ca809a35c9ea010655f4d0978"
+  },
+  "train": {
+    "rows": 3000,
+    "classes": {
+      "neutral": 1634,
+      "positive": 914,
+      "negative": 452
+    },
+    "sha256": "0ebfa36c51bfbe024e653aa6d68e8abaa7ea262bb6101f39c1cce4fb2c6ad110"
+  },
+  "validation": {
+    "rows": 500,
+    "classes": {
+      "neutral": 272,
+      "positive": 152,
+      "negative": 76
+    },
+    "sha256": "f608bc20149b7596a8997fca257a995bf3dbadeee939d18fbe953469475927b4"
+  },
+  "policy": "Three original classes; speech and skip excluded. Unique text. Original held-out test preserved. Stratified seed42, no test tuning."
+}

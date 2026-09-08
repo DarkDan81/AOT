@@ -1,0 +1,6 @@
+streamlit
+rank-bm25
+pydantic>=2
+pandas
+pytest
+requests

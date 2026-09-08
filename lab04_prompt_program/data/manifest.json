@@ -1,0 +1,11 @@
+{
+  "source_url": "https://raw.githubusercontent.com/cimm-kzn/RuDReC/master/data/rudrec_annotated.json",
+  "retrieved_date": "2026-09-08",
+  "source_sha256": "bb58f84d86ebae8dd122a9d8b99c173b84190cd31e70ad0143c2fd466245cb0f",
+  "n_reviews": 50,
+  "selection": "50 shortest full reviews by character count, then file_name",
+  "min_chars": 159,
+  "max_chars": 374,
+  "mean_chars": 265.72,
+  "annotation": "upstream NER plus explicitly documented AI-agent adaptation frozen before inference"
+}

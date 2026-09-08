@@ -1,0 +1,40 @@
+[
+  {
+    "version": "version_1",
+    "n": 50,
+    "json_first_valid": 50,
+    "first_contract_valid": 39,
+    "final_valid": 45,
+    "retries": 11,
+    "seconds": 331.002525499998,
+    "prompt_tokens": 12131,
+    "completion_tokens": 7385,
+    "tp": 198,
+    "fp": 201,
+    "fn": 159,
+    "unsupported_final": 60,
+    "unsupported_initial": 70,
+    "precision": 0.49624060150375937,
+    "recall": 0.5546218487394958,
+    "f1": 0.523809523809524
+  },
+  {
+    "version": "version_2",
+    "n": 50,
+    "json_first_valid": 50,
+    "first_contract_valid": 37,
+    "final_valid": 42,
+    "retries": 13,
+    "seconds": 382.5412829999998,
+    "prompt_tokens": 46717,
+    "completion_tokens": 8587,
+    "tp": 222,
+    "fp": 193,
+    "fn": 135,
+    "unsupported_final": 0,
+    "unsupported_initial": 2,
+    "precision": 0.5349397590361445,
+    "recall": 0.6218487394957983,
+    "f1": 0.5751295336787564
+  }
+]
