@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-09-08T16:02:48.783718+00:00",
+  "source": "https://github.com/DarkDan81/AOT.git",
+  "commit": "7a8e1da93e7d818e6d999e0c8001165e0c01753f",
+  "clone_core_autocrlf": false,
+  "fresh_repository_checkout": true,
+  "environment": "Reused E:/AOT-work/.venv; no new LLM inference or package installation",
+  "pytest_passed": 64,
+  "submission_checks_passed": 22,
+  "report_layouts_verified": 6,
+  "lab05_frozen_inputs_verified": 6,
+  "lab06_context_and_gold_verification": "passed"
+}
