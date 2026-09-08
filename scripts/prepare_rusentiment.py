@@ -16,7 +16,7 @@ def main():
         path = raw/f'{key}.csv'
         if not path.exists():
             response=requests.get(URL+name,timeout=120); response.raise_for_status(); path.write_bytes(response.content)
-        df=pd.read_csv(path); checks[key]={'rows':len(df),'nulls':df.isna().sum().to_dict(),'duplicate_texts':int(df.text.duplicated().sum()),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'url':URL+name}
+        df=pd.read_csv(path); checks['source_'+key]={'rows':len(df),'nulls':df.isna().sum().to_dict(),'duplicate_texts':int(df.text.duplicated().sum()),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'url':URL+name}
         df['id']=[f'{key}_{i:05d}' for i in range(len(df))]
         frames[key]=df.dropna(subset=['text','label']).drop_duplicates('text').query("label in ['positive','negative','neutral']")[['id','text','label']]
     train_pool=frames['random'][~frames['random'].text.isin(frames['test'].text)]

@@ -1,0 +1,24 @@
+{
+  "model": "mistralai/ministral-3-14b-reasoning",
+  "base_url": "http://localhost:1234/v1",
+  "temperature": 0,
+  "seed": 42,
+  "max_tokens": 1500,
+  "mode_A_document_order": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09"
+  ],
+  "bm25_k": 15,
+  "p": 3,
+  "prompt_sha256": "c01f4fd39d26980df91cc99784c18b160b00ba7e1a793b5b8fa4a04b0e189e0f",
+  "planned_calls": 120,
+  "independent_human_participants": 0,
+  "simulated_ai_review_roles": 3
+}

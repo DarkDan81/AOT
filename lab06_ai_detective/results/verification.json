@@ -2,7 +2,7 @@
   "pytest": "19 passed in 0.49s",
   "streamlit_apptest_initial_exceptions": 0,
   "model_calls_so_far": 0,
-  "word_count": 5039,
+  "word_count": 5046,
   "claims": 36,
   "documents": 9,
   "questions": 12

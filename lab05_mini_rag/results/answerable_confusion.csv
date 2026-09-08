@@ -1,0 +1,9 @@
+split,mode,gold_answerable,pred_answerable,n
+test,bm25,False,False,12
+test,bm25,True,True,28
+test,full,False,False,12
+test,full,True,True,28
+train,bm25,False,False,18
+train,bm25,True,True,42
+train,full,False,False,18
+train,full,True,True,42

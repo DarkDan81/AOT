@@ -1,0 +1,5 @@
+stage,mode,n,json_validity,answer_accuracy,answerable_accuracy,seconds_mean,input_tokens_mean,output_tokens_mean,timing_comparable
+challenge,bm25,15,1.0,0.8666666666666667,0.9333333333333333,2.639241480000025,382.46666666666664,18.6,False
+challenge,full,15,1.0,0.9333333333333333,0.9333333333333333,3.0810738866667027,1204.9333333333334,18.866666666666667,False
+challenge_replication,bm25,4,1.0,0.25,0.25,2.9410908500000232,388.0,19.0,False
+challenge_replication,full,4,1.0,0.0,0.0,3.532526650000136,1216.0,19.5,False

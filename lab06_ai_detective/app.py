@@ -1,4 +1,4 @@
-﻿import json,pathlib,sys
+﻿import json,pathlib,sys,hashlib
 import pandas as pd
 import streamlit as st
 P=pathlib.Path(__file__).parent;sys.path.insert(0,str(P));sys.path.insert(0,str(P.parent))
@@ -19,10 +19,20 @@ with st.sidebar:
  mode=st.radio('Режим',['A','B','C'],format_func=lambda x:{'A':'A — полный контекст','B':'B — BM25 top-15','C':'C — p-adic ветви'}[x])
  mutation=st.selectbox('Изменение',['baseline','permutation','deletion','contradiction'],format_func=lambda x:{'baseline':'Исходное досье','permutation':'Переставить документы (42)','deletion':'Удалить необходимую посылку','contradiction':'Добавить подготовленное противоречие'}[x])
  v=next(x for x in variants if x['question']['question_id']==q['question_id'] and x['kind']==mutation)
+ manual_remove=None
  if mutation=='deletion':
-  if v['applicable']:st.selectbox('Удаляемая посылка (проверенный вариант)',v['changed_claim_ids'])
-  else:st.info('Для этого типа вопроса удаление необходимой посылки не оценивается.')
+  baseline=next(x for x in variants if x['question']['question_id']==q['question_id'] and x['kind']=='baseline')
+  options=baseline['claims'];default=next((i for i,c in enumerate(options) if c['claim_id'] in v['changed_claim_ids']),0)
+  chosen=st.selectbox('Удаляемая посылка',options,index=default,format_func=lambda c:c['claim_id']+' — '+c['text'])
+  if not v['applicable'] or chosen['claim_id'] not in v['changed_claim_ids']:manual_remove=chosen
  docs=v['documents'];claims=v['claims'];custom=False
+ if manual_remove:
+  import copy
+  docs=copy.deepcopy(baseline['documents'])
+  for d in docs:
+   if d['document_id']==manual_remove['document_id']:d['text']=d['text'].replace(manual_remove['evidence'],'')
+  claims=[c for c in baseline['claims'] if c['claim_id']!=manual_remove['claim_id']]
+  custom=True;st.info('Произвольное удаление: эталон не проверен, автоматическая оценка отключена.')
  if uploaded:
   try:
    docs=[json.loads(x) for x in uploaded.getvalue().decode('utf-8-sig').splitlines() if x.strip()]
@@ -33,6 +43,7 @@ with st.sidebar:
   except Exception as e:st.error(str(e));st.stop()
 selected=retrieve(q['question'],claims)
 context,ids=build(mode,q['question'],docs,claims,selected)
+context_hash=hashlib.sha256(context.encode('utf8')).hexdigest()
 a,b=st.columns([3,2])
 with a:
  st.subheader(q['question'])
@@ -41,10 +52,14 @@ with a:
  if st.button('Запросить локальную модель',disabled=not v['applicable'] and not custom):
   try:
    with st.spinner('Модель анализирует доступный контекст…'):answer,transport=ask(q,context,ids)
-   st.session_state['live']={'key':(v['variant_id'],mode,custom),'answer':answer,'transport':transport}
+   (P/'results/interactive_contexts').mkdir(exist_ok=True)
+   (P/'results/interactive_contexts'/f'{context_hash}.txt').write_text(context,encoding='utf8')
+   with (P/'results/interactive.jsonl').open('a',encoding='utf8') as handle:
+    handle.write(json.dumps({'question':q,'mode':mode,'context_sha256':context_hash,'custom_context':custom,'answer':answer,'transport':transport},ensure_ascii=False)+'\n')
+   st.session_state['live']={'key':(v['variant_id'],mode,context_hash),'answer':answer,'transport':transport}
   except Exception as e:st.error(f'Запрос не выполнен: {e}')
  live=st.session_state.get('live',{})
- current=live if live.get('key')==(v['variant_id'],mode,custom) else matching[-1] if matching and not custom else None
+ current=live if live.get('key')==(v['variant_id'],mode,context_hash) else matching[-1] if matching and not custom else None
  if current and current.get('answer'):
   answer=current['answer'];st.metric('Логический статус',answer['status']);st.metric('Confidence',f"{answer['confidence']:.2f}")
   st.write(answer['answer'] or 'Однозначный ответ не дан.');st.write(answer['explanation'])
@@ -63,7 +78,7 @@ with b:
 with st.expander('Передаваемый контекст и порядок документов'):
  st.write([d['document_id'] for d in docs]);st.code(context,language=None)
  st.download_button('Скачать контекст',context,file_name=f"{v['variant_id']}_{mode}.txt")
-with st.expander('Исходные документы'):
+with st.expander('Документы выбранного варианта'):
  for d in docs:st.markdown('**'+d['document_id']+' '+d['title']+'**');st.write(d['text'])
 st.subheader('Сравнение сохранённых режимов')
 comparison=[]
@@ -74,3 +89,6 @@ for r in saved:
 if comparison and not custom:st.dataframe(pd.DataFrame(comparison),hide_index=True)
 else:st.info('Сохранённые результаты не найдены или неприменимы к загруженному досье.')
 st.caption('Стресс-варианты предварительно проверены агентами. Такая проверка не выдаётся за проверку реальными участниками.')
+
+
+

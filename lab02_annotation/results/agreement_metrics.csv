@@ -1,0 +1,16 @@
+stage,metric,value,n
+initial_90,annotator_a / annotator_b,0.40911648846370285,90
+initial_90,annotator_a / annotator_c,0.5283548568220102,90
+initial_90,annotator_b / annotator_c,0.8250162022034997,90
+initial_90,Fleiss kappa,0.5697592067988667,90
+initial_90,full agreement,0.6,90
+initial_disputed_30,annotator_a / annotator_b,-0.1328125,30
+initial_disputed_30,annotator_a / annotator_c,-0.07142857142857162,30
+initial_disputed_30,annotator_b / annotator_c,0.5833333333333334,30
+initial_disputed_30,Fleiss kappa,-0.004464285714285604,30
+initial_disputed_30,full agreement,0.0,30
+revised_same_30,annotator_a / annotator_b,1.0,30
+revised_same_30,annotator_a / annotator_c,1.0,30
+revised_same_30,annotator_b / annotator_c,1.0,30
+revised_same_30,Fleiss kappa,1.0,30
+revised_same_30,full agreement,1.0,30

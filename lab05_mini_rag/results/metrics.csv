@@ -1,0 +1,5 @@
+split,mode,n,json_validity,answer_accuracy,answer_exact,answerable_accuracy,context_answerable_accuracy,evidence_precision,evidence_recall,evidence_f1,seconds_mean,input_tokens_mean,output_tokens_mean,answerable_precision,answerable_recall,refusal_recall,evidence_f1_answerable_only
+test,bm25,40,1.0,0.9,0.575,1.0,0.9,1.0,0.9833333333333334,0.990909090909091,2.829282030000047,390.5,24.9,1.0,1.0,1.0,0.987012987012987
+test,full,40,1.0,1.0,0.675,1.0,1.0,1.0,1.0,1.0,3.1701448925000024,1063.0,25.15,1.0,1.0,1.0,1.0
+train,bm25,60,1.0,0.9,0.55,1.0,0.9,1.0,0.9833333333333333,0.9909090909090909,2.844012271666634,390.4,25.0,1.0,1.0,1.0,0.987012987012987
+train,full,60,1.0,1.0,0.7833333333333333,1.0,1.0,1.0,1.0,1.0,3.1758581916666646,1062.4333333333334,24.45,1.0,1.0,1.0,1.0

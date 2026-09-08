@@ -1,11 +1,11 @@
 {
   "phase": "before any model inference",
-  "words": 5039,
+  "words": 5046,
   "sha256": {
-    "documents.jsonl": "8203cdc08db95177f129b741744d4647169e26713f7948589404ba78bcfeb187",
+    "documents.jsonl": "f651fbeeedfa5ae36a2cbd5d42b9a0fae41b22bb05283abf0de487570e776e6f",
     "claims.jsonl": "409e47c3be71e19b8307ee4b8ec9b188251e235e7574c4dabe580b0c0e2cf546",
     "questions.jsonl": "0c3038ad4b542f5628c1f52b208f523c08ec813ad7b2a1729c0d42f5732ae6e9",
-    "variants.jsonl": "fe9c61abb9b4f361455803afc975c68acb72b93b8a53741b00badd318f00f2e6"
+    "variants.jsonl": "13f44df55082c166e9d0e5bfb02dc667fdcfb8fe4235453bc01fafcd85fab24c"
   },
   "review": "All gold reviewed before model inference by three AI roles; not human verification."
 }

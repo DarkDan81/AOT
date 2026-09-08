@@ -1,0 +1,15 @@
+﻿{
+    "id":  "mistralai/ministral-3-14b-reasoning",
+    "object":  "model",
+    "type":  "vlm",
+    "publisher":  "mistralai",
+    "arch":  "mistral3",
+    "compatibility_type":  "gguf",
+    "quantization":  "Q4_K_M",
+    "state":  "loaded",
+    "max_context_length":  262144,
+    "loaded_context_length":  24576,
+    "capabilities":  [
+                         "tool_use"
+                     ]
+}

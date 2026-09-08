@@ -1,0 +1,7 @@
+{
+  "phase": "targeted after CH07, before replication calls",
+  "hashes": {
+    "inputs.jsonl": "7d9b35d99d847e5d1c8e81fb000a606f3cc746d4eb7d7b1a85b0641a37f0b4bb",
+    "gold.jsonl": "67bc198e643dd9732ff18c8e8d1d8dd0a5c1ddcb85fd7292bb0eed191a6b4224"
+  }
+}
