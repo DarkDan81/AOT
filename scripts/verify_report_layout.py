@@ -30,6 +30,7 @@ def check(folder):
         text = '\n'.join(page.get_text() for page in rendered)
         cover = rendered[0].get_text()
         assert 'К3341' in cover and 'Гусарова Наталия Федоровна' in cover
+        assert 'Дущенко Даниил Александрович' in cover and 'Коваленко Евгений Юрьевич' in cover
         assert all(s in text for s in ['СОДЕРЖАНИЕ', 'ВВЕДЕНИЕ', 'ЗАКЛЮЧЕНИЕ', 'СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ'])
         assert not any(s in text for s in ['Содержание обновляется', 'EMPIRICAL_', 'КХХХХХ', 'PrezGen'])
         for i, page in enumerate(rendered, 1):

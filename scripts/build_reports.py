@@ -57,7 +57,8 @@ def cover(doc,num,title):
     p=clone(9,'по дисциплине «Автоматическая обработка текста»')
     for r in p.runs:r.bold=False
     p=clone(10,f'Тема: «{title}»');p.paragraph_format.space_before=Pt(18)
-    p=clone(12,'Обучающийся: Дущенко Даниил Александрович, К3341');p.paragraph_format.space_before=Pt(62)
+    p=clone(12,'Обучающиеся: Дущенко Даниил Александрович, К3341');p.paragraph_format.space_before=Pt(52)
+    clone(12,'Коваленко Евгений Юрьевич, К3341')
     p=clone(14,'Преподаватель: Гусарова Наталия Федоровна');p.paragraph_format.space_before=Pt(16)
     p=clone(20,'Санкт-Петербург');p.paragraph_format.space_before=Pt(96)
     clone(21,'2026')
@@ -106,7 +107,7 @@ def build(folder):
     sec=doc.sections[0];sec.page_width=Cm(21);sec.page_height=Cm(29.7);sec.left_margin=Cm(3);sec.right_margin=Cm(1.5);sec.top_margin=Cm(2);sec.bottom_margin=Cm(2);sec.different_first_page_header_footer=True
     for name in ['Normal','Heading 1','Heading 2']:
         s=doc.styles[name];s.font.name='Times New Roman';s.font.size=Pt(14);s.font.color.rgb=RGBColor(0,0,0)
-    doc.core_properties.author='Дущенко Даниил Александрович';doc.core_properties.title=f'Лабораторная работа № {num}. {title}';doc.core_properties.subject='Автоматическая обработка текста';doc.core_properties.comments='Подготовлено с помощью ИИ; результаты и ограничения описаны в отчете.'
+    doc.core_properties.author='Дущенко Даниил Александрович; Коваленко Евгений Юрьевич';doc.core_properties.title=f'Лабораторная работа № {num}. {title}';doc.core_properties.subject='Автоматическая обработка текста';doc.core_properties.comments='Группа К3341. Методика и результаты экспериментов описаны в отчете.'
     cover(doc,num,title);add_contents(doc)
     lines=src.read_text(encoding='utf-8-sig').splitlines();i=0;sub=0;main=False;intro=False;tbl=0;fig=0;in_code=False;pending_caption=None
     while i<len(lines):

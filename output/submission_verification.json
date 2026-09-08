@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-08T16:00:00.664295+00:00",
+  "checked_at_utc": "2026-09-08T17:02:07.497023+00:00",
   "root": "E:\\AOT-work",
   "complete": true,
   "checks_passed": 22,
@@ -155,8 +155,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 203732,
-        "pdf_bytes": 344032
+        "docx_bytes": 203874,
+        "pdf_bytes": 343901
       }
     },
     {
@@ -164,8 +164,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 36146,
-        "pdf_bytes": 183606
+        "docx_bytes": 36173,
+        "pdf_bytes": 183364
       }
     },
     {
@@ -173,8 +173,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 40289,
-        "pdf_bytes": 208811
+        "docx_bytes": 40277,
+        "pdf_bytes": 208956
       }
     },
     {
@@ -182,8 +182,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 38949,
-        "pdf_bytes": 203388
+        "docx_bytes": 38977,
+        "pdf_bytes": 203557
       }
     },
     {
@@ -191,8 +191,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 39854,
-        "pdf_bytes": 214674
+        "docx_bytes": 39959,
+        "pdf_bytes": 214890
       }
     },
     {
@@ -200,8 +200,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 38123,
-        "pdf_bytes": 197979
+        "docx_bytes": 38239,
+        "pdf_bytes": 197995
       }
     },
     {
@@ -209,7 +209,7 @@
       "check": "report_word_limit",
       "status": "passed",
       "detail": {
-        "main_body_words": 752,
+        "main_body_words": 761,
         "minimum": 700,
         "maximum": 1000,
         "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"
@@ -220,7 +220,7 @@
       "check": "report_word_limit",
       "status": "passed",
       "detail": {
-        "main_body_words": 782,
+        "main_body_words": 764,
         "minimum": 0,
         "maximum": 1200,
         "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"
@@ -231,7 +231,7 @@
       "check": "report_word_limit",
       "status": "passed",
       "detail": {
-        "main_body_words": 1136,
+        "main_body_words": 1133,
         "minimum": 0,
         "maximum": 1500,
         "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"
