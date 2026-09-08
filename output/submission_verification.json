@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-08T17:02:07.497023+00:00",
+  "checked_at_utc": "2026-09-08T17:09:22.923923+00:00",
   "root": "E:\\AOT-work",
   "complete": true,
   "checks_passed": 22,
@@ -155,8 +155,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 203874,
-        "pdf_bytes": 343901
+        "docx_bytes": 203380,
+        "pdf_bytes": 343632
       }
     },
     {
@@ -173,8 +173,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 40277,
-        "pdf_bytes": 208956
+        "docx_bytes": 40231,
+        "pdf_bytes": 208718
       }
     },
     {
@@ -182,8 +182,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 38977,
-        "pdf_bytes": 203557
+        "docx_bytes": 38969,
+        "pdf_bytes": 203329
       }
     },
     {
