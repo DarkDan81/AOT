@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-08T17:20:04.614268+00:00",
+  "checked_at_utc": "2026-09-09T18:05:12.488580+00:00",
   "root": "E:\\AOT-work",
   "complete": true,
   "checks_passed": 22,
@@ -164,8 +164,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 36615,
-        "pdf_bytes": 186747
+        "docx_bytes": 36613,
+        "pdf_bytes": 186742
       }
     },
     {
@@ -220,7 +220,7 @@
       "check": "report_word_limit",
       "status": "passed",
       "detail": {
-        "main_body_words": 850,
+        "main_body_words": 852,
         "minimum": 0,
         "maximum": 1200,
         "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"

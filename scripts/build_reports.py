@@ -172,7 +172,7 @@ def guide():
         else:p=paragraph(doc,line)
         p.paragraph_format.line_spacing=1.0;p.paragraph_format.space_after=Pt(4)
         for r in p.runs:font(r,12,bold=line.startswith('#'))
-    doc.core_properties.title='Инструкция разметчику: срочность обращения';doc.core_properties.author='Дущенко Даниил Александрович'
+    doc.core_properties.title='Инструкция разметчику: срочность обращения';doc.core_properties.author='Дущенко Даниил Александрович; Коваленко Евгений Юрьевич'
     doc.save(ROOT/'lab02_annotation/guidelines.docx')
 
 if __name__=='__main__':

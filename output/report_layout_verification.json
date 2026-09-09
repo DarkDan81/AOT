@@ -30,8 +30,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "2885c640928711edf79fb08d9f04a19dffa9deef9cb27892c8ff1e739862db58",
-        "report.pdf": "5d634deb43a4c855eb107a06f687962ded1c84815ea91ab2bb87f62e8482eb0c"
+        "report.docx": "4afb4be8887e1900fe6dc757a0b182ca026d6fad51a03b96f4ae0e09b5dba77c",
+        "report.pdf": "ca08b67bcef0912812ee18c0b2ade287d6a4154e0e1269099cd5eaf4d237c6a9"
       }
     },
     {
@@ -106,8 +106,8 @@
   "annotation_guidelines": {
     "pages": 2,
     "sha256": {
-      "guidelines.docx": "f144c8053a60d449354aa025f94c38668c56ebe1a6940f467376a1d7c61ef128",
-      "guidelines.pdf": "d3e07d301d185195ca4e10646bb72afad2f71551038164005eb7518171211ffd"
+      "guidelines.docx": "78da5aed022bf06cb90fc520348f0020e03652b035a19d4852806e739e031fd2",
+      "guidelines.pdf": "0ff2846c9e8c35868fadcc9196963b501712ea0dfca9f780bb1538b63a48cce7"
     }
   },
   "scope": "Structural preflight; page images reviewed separately."
