@@ -1,8 +1,0 @@
-{
-  "data/documents.jsonl": "ea40637f0f46eee6d0754b703131447169559c3451eff45980abc90a5fad4f58",
-  "data/train.jsonl": "c76b380dd901b0889e0f50d305b9029c0f02c6e337891ea31e8862f73f71407e",
-  "data/test.jsonl": "0834cc7eb6c004847ea65e4e19e964677567a22788c76d5ba043e106ebfbb8fd",
-  "data/questions.jsonl": "7b16e876eff0eeecbe1c3a31db7ec6f636bb32b3640df11a69ef8881613469a0",
-  "evaluation_private/test_gold.jsonl": "ce4cb9e25f19baeee34c6b34ac3ef73b9951e7599df87b586ef34b32113da52a",
-  "prompt.txt": "5b4a49b96f3e4f3400d7a04965e42ee4ae3a1b755e3c21d2a4a0b9cc11ba77eb"
-}
