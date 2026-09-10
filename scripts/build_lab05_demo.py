@@ -55,6 +55,14 @@ display(pd.DataFrame(docs[q['document_id']]['paragraphs']))
 ''')
 md('## 2. BM25 top-5\nИспользуем существующую функцию `retrieve.top5`: razdel, нижний регистр, без лемматизации. Поиск выполняется внутри документа вопроса.')
 code('''
+import inspect
+from IPython.display import Code
+from lab05_mini_rag.retrieve import tokens
+
+# Исходный код функций, используемых при поиске.
+display(Code(inspect.getsource(tokens) + '\\n\\n' + inspect.getsource(top5), language='python'))
+''')
+code('''
 selected = top5(docs[q['document_id']], q['question'])
 display(pd.DataFrame(selected))
 print('Эталонные ID:', gold[QUESTION_ID]['evidence_ids'])
