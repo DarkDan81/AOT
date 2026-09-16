@@ -87,7 +87,7 @@
     },
     {
       "folder": "lab06_ai_detective",
-      "pages": 10,
+      "pages": 12,
       "a4": true,
       "margins_cm": [
         3,
@@ -98,8 +98,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "1338bbf58b69aa7642d1280df049307f2189e8eb60709badf60ff4093e34a518",
-        "report.pdf": "15fa3a84e7992bd557c0b4983a152f0c35f9f3cb5f88b9be7951bc9d1ca16295"
+        "report.docx": "d6caff916d5f347fde69b47f7df76884197cca3ec902aed0673f6277b891dae3",
+        "report.pdf": "ea8b939b5c14e75e7399ea747b12bad07fa1065519b52a0c62f84927a28de496"
       }
     }
   ],

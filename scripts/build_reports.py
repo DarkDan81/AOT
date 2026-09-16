@@ -125,7 +125,11 @@ def build(folder):
             continue
         if line.startswith('##'):
             text=line.lstrip('#').strip();text=re.sub(r'^\d+[.)]?\s+','',text)
-            if not intro:
+            if num==6 and text in ['Задание','Ход работы']:
+                heading(doc,('1 ' if text=='Задание' else '2 ')+text,newpage=True);main=True
+            elif num==6 and text.startswith('Этап '):
+                sub+=1;heading(doc,f'2.{sub} {text}',level=2)
+            elif not intro:
                 heading(doc,'ВВЕДЕНИЕ',newpage=True,center=True);intro=True
             elif re.search(r'источник|литератур',text,re.I):heading(doc,'СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ',newpage=True,center=True)
             elif text.lower() in ['заключение','вывод','выводы','итоговые выводы']:heading(doc,'ЗАКЛЮЧЕНИЕ',newpage=True,center=True)
