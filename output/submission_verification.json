@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-16T11:27:57.139985+00:00",
+  "checked_at_utc": "2026-09-17T07:19:45.533923+00:00",
   "root": "E:\\AOT-work",
   "complete": true,
   "checks_passed": 22,
@@ -155,8 +155,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 203380,
-        "pdf_bytes": 343632
+        "docx_bytes": 204332,
+        "pdf_bytes": 348896
       }
     },
     {
@@ -173,8 +173,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 40231,
-        "pdf_bytes": 208718
+        "docx_bytes": 40943,
+        "pdf_bytes": 226053
       }
     },
     {
@@ -182,8 +182,8 @@
       "check": "docx_and_pdf",
       "status": "passed",
       "detail": {
-        "docx_bytes": 38969,
-        "pdf_bytes": 203329
+        "docx_bytes": 39218,
+        "pdf_bytes": 209091
       }
     },
     {
@@ -209,7 +209,7 @@
       "check": "report_word_limit",
       "status": "passed",
       "detail": {
-        "main_body_words": 761,
+        "main_body_words": 866,
         "minimum": 700,
         "maximum": 1000,
         "method": "whitespace tokens containing letters/digits; title block and bibliography excluded"

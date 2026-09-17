@@ -125,9 +125,9 @@ def build(folder):
             continue
         if line.startswith('##'):
             text=line.lstrip('#').strip();text=re.sub(r'^\d+[.)]?\s+','',text)
-            if num==6 and text in ['Задание','Ход работы']:
+            if num in {1,3,4,6} and text in ['Задание','Ход работы']:
                 heading(doc,('1 ' if text=='Задание' else '2 ')+text,newpage=True);main=True
-            elif num==6 and text.startswith('Этап '):
+            elif num in {1,3,4,6} and text.startswith(('Этап ','Задание ','Дополнительная проверка')):
                 sub+=1;heading(doc,f'2.{sub} {text}',level=2)
             elif not intro:
                 heading(doc,'ВВЕДЕНИЕ',newpage=True,center=True);intro=True

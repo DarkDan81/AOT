@@ -2,7 +2,7 @@
   "reports": [
     {
       "folder": "lab01_representations",
-      "pages": 9,
+      "pages": 10,
       "a4": true,
       "margins_cm": [
         3,
@@ -13,8 +13,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "b8dcf3634badd36bf8c38a2312d8c941cce9b138bfa1ba1cf23546eb84684d7a",
-        "report.pdf": "b1a14ed0c45953b2c5d2f5eb0a239a9d9c0c85246b85945631290efc4c8e7b04"
+        "report.docx": "95e4822c88a43fbba1d86e978559fedebd7eee32fdffbd30ba6357a9ebe1ea39",
+        "report.pdf": "d37dc29e656b827e132c819b580b916c8245bf5cae80732cddbc64cd9fd6eab0"
       }
     },
     {
@@ -36,6 +36,23 @@
     },
     {
       "folder": "lab03_classification",
+      "pages": 14,
+      "a4": true,
+      "margins_cm": [
+        3,
+        1.5,
+        2,
+        2
+      ],
+      "normal_font": "Times New Roman 14 pt",
+      "required_sections": true,
+      "sha256": {
+        "report.docx": "b3ea7e7ebfee2652f04ff0c33b84fbadfe8ebf5e6fdeebe196ff93ef3c262346",
+        "report.pdf": "a2304f7d30ee1712d2df5650ac50891d1ffc7f9e83fd9747664496e4d19e36eb"
+      }
+    },
+    {
+      "folder": "lab04_prompt_program",
       "pages": 11,
       "a4": true,
       "margins_cm": [
@@ -47,25 +64,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "8538fc366d423c2d8122792c4f6e3fec9b0bdabb1d38214cb179559daf1f8451",
-        "report.pdf": "248164bac11943c407a6a70d2e1b8bf7b01b7b7f86f12538fad4de11a6b410f4"
-      }
-    },
-    {
-      "folder": "lab04_prompt_program",
-      "pages": 10,
-      "a4": true,
-      "margins_cm": [
-        3,
-        1.5,
-        2,
-        2
-      ],
-      "normal_font": "Times New Roman 14 pt",
-      "required_sections": true,
-      "sha256": {
-        "report.docx": "e29d279b055c8306eb0deb37156d9ac593d644925384dc64541b3b985497df47",
-        "report.pdf": "f73ac6445dd93780bbefa94e2e9db5b370b31bbd96c675962554c73863dc1978"
+        "report.docx": "cae4d7caeeeef33c13d42cfa28b7bb1a8a043cc1c4d7e7a7cdc1ab7bc118cc6c",
+        "report.pdf": "8e724d2e432d78c072051a017c45023578517cab2192aa9c83a733bce72264ab"
       }
     },
     {
