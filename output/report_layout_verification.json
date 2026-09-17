@@ -2,7 +2,7 @@
   "reports": [
     {
       "folder": "lab01_representations",
-      "pages": 11,
+      "pages": 10,
       "a4": true,
       "margins_cm": [
         3,
@@ -13,8 +13,8 @@
       "normal_font": "Times New Roman 14 pt",
       "required_sections": true,
       "sha256": {
-        "report.docx": "567635d4d063dbb60033b6cd396876573949fc1d03bf89e5ba7a7def1ae7c010",
-        "report.pdf": "080a3ea13ab1d31b2a63014e31c05ffdd34464b987886c2e7151928e5398c70f"
+        "report.docx": "817fead84d2c58f2d5f8f05c20700d857cf37875480450324513d2403461ec00",
+        "report.pdf": "3c3068e6f912295ebea4b35b2b005d2d9d011cf57137b670773b443f5879a96a"
       }
     },
     {

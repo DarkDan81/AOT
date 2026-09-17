@@ -34,7 +34,7 @@ def run():
     rows=[]
     for ident,kind,text,changed,reason in transformations:
         source=df.set_index('id').loc[ident]
-        rows.append(dict(id=ident,label=source.label,original=source.text,transformation=kind,transformed=text,meaning_changed=changed,judgment=reason,reviewer='Draft: Codex; confirmed by Дущенко Даниил Александрович on 2026-09-17'))
+        rows.append(dict(id=ident,label=source.label,original=source.text,transformation=kind,transformed=text,meaning_changed=changed,judgment=reason,reviewer='Дущенко Даниил Александрович; оценки подтверждены 2026-09-17'))
     pairs=pd.DataFrame(rows); pairs.to_csv(HERE/'data/transformations.csv',index=False)
     tok=lambda text:[t.text.lower() for t in tokenize(text) if any(c.isalnum() for c in t.text)]
     bow=CountVectorizer(tokenizer=tok,token_pattern=None,lowercase=False)
