@@ -10,7 +10,7 @@ from lab06_ai_detective.src.llm import ask
 def read(p):return [json.loads(x) for x in p.read_text(encoding='utf8').splitlines()]
 st.set_page_config(page_title='AI-детектив: Орион',layout='wide')
 st.title('AI-детектив: досье «Орион»')
-st.caption('Все события вымышлены. Результаты получены одной локальной моделью; независимые роли моделируются ИИ.')
+st.caption('Все события вымышлены. Результаты получены одной локальной моделью.')
 variants=read(P/'data/variants.jsonl');questions=read(P/'data/questions.jsonl')
 with st.sidebar:
  st.header('Исследование')
@@ -88,7 +88,6 @@ for r in saved:
  comparison.append({'Режим':r['mode'],'Статус':answer.get('status','INVALID'),'Evidence F1':r.get('metrics',{}).get('evidence_f1'),'Confidence':answer.get('confidence'),'Токены':t.get('usage',{}).get('total_tokens'),'Секунды':t.get('elapsed_seconds')})
 if comparison and not custom:st.dataframe(pd.DataFrame(comparison),hide_index=True)
 else:st.info('Сохранённые результаты не найдены или неприменимы к загруженному досье.')
-st.caption('Стресс-варианты предварительно проверены агентами. Такая проверка не выдаётся за проверку реальными участниками.')
 
 
 
